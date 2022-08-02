@@ -7,6 +7,8 @@ struct SDL_Window;
 
 namespace vl
 {
+	class Texture;
+
 	class Renderer
 	{
 	public:
@@ -32,10 +34,14 @@ namespace vl
 		void DrawLine(const Vector2& v1, const Vector2& v2, const Color& color);
 		void DrawPoint(const Vector2& v, const Color& color);
 
+		// image
+		void Draw(std::shared_ptr<Texture> texture, const Vector2& position, float angle = 0);
+
 		int GetWidth() { return m_width; }
 		int GetHeight() { return m_height; }
 
 		friend class Text;
+		friend class Texture;
 
 	private:
 		int m_width = 0;

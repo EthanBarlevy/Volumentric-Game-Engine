@@ -134,8 +134,8 @@
     <ClCompile Include="mian.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\CSC196\Engine\Engine.vcxproj">
-      <Project>{cbc63f2f-6469-438c-a5bb-5bfa7e0d0375}</Project>
+    <ProjectReference Include="..\Engine\Engine.vcxproj">
+      <Project>{a78f4ba7-e1fb-4ff3-a7fc-9b9e30b48980}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

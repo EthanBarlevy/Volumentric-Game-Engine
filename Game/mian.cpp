@@ -19,6 +19,10 @@ int main()
 	vl::g_renderer.CreateWindow("Gaming", 500, 500);
 	vl::g_renderer.setClearColor(vl::Color{ 0, 0, 0, 255 });
 
+	// this will be moved later
+	std::shared_ptr<vl::Texture> texture = std::make_shared<vl::Texture>();
+	texture->Create(vl::g_renderer, "file.png");
+
 	{
 		bool quit = false;
 		while (!quit)
@@ -32,6 +36,8 @@ int main()
 
 			//render
 			vl::g_renderer.BeginFrame();
+
+			vl::g_renderer.Draw(texture, { 250, 250 }, 0);
 
 			vl::g_renderer.EndFrame();
 		}

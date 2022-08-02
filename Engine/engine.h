@@ -17,6 +17,7 @@
 #include "Renderer/model.h"
 #include "Renderer/font.h"
 #include "Renderer/text.h"
+#include "Renderer/texture.h"
 
 #include <memory>
 #include <vector>

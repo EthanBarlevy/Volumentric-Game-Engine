@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{cbc63f2f-6469-438c-a5bb-5bfa7e0d0375}</ProjectGuid>
+    <ProjectGuid>{A78F4BA7-E1FB-4FF3-A7FC-9B9E30B48980}</ProjectGuid>
     <RootNamespace>Emgine</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -168,6 +168,7 @@
     <ClCompile Include="Renderer\model.cpp" />
     <ClCompile Include="Renderer\renderer.cpp" />
     <ClCompile Include="Renderer\text.cpp" />
+    <ClCompile Include="Renderer\texture.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Audio\audioSystem.h" />
@@ -189,6 +190,7 @@
     <ClInclude Include="Renderer\model.h" />
     <ClInclude Include="Renderer\renderer.h" />
     <ClInclude Include="Renderer\text.h" />
+    <ClInclude Include="Renderer\texture.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

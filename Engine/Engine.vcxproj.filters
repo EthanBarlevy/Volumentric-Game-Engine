@@ -72,6 +72,9 @@
     <ClCompile Include="Renderer\text.cpp">
       <Filter>Source Files\Renderer</Filter>
     </ClCompile>
+    <ClCompile Include="Renderer\texture.cpp">
+      <Filter>Source Files\Renderer</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Math\mathUtils.h">
@@ -130,6 +133,9 @@
     </ClInclude>
     <ClInclude Include="Framework\game.h">
       <Filter>Source Files\Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\texture.h">
+      <Filter>Source Files\Renderer</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
