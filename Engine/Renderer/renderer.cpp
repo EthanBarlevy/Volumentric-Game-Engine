@@ -2,6 +2,8 @@
 #include "texture.h"
 #include <SDL.h>
 #include <SDL_ttf.h>
+#include <SDL_image.h>
+#include <iostream>
 
 namespace vl
 {
@@ -9,6 +11,7 @@ namespace vl
 	{
 		SDL_Init(SDL_INIT_VIDEO);
 		TTF_Init();
+		IMG_Init(IMG_INIT_JPG | IMG_INIT_PNG);
 	}
 
 	void Renderer::Shutodwn()
@@ -16,6 +19,7 @@ namespace vl
 		SDL_DestroyRenderer(m_renderer);
 		SDL_DestroyWindow(m_window);
 		TTF_Quit();
+		IMG_Quit();
 	}
 
 	void Renderer::CreateWindow(const char* name, int width, int height)

@@ -26,7 +26,7 @@ namespace vl
     {
         SDL_Point point;
         SDL_QueryTexture(m_texture, nullptr, nullptr, &point.x, &point.y);
-        return Vector2();
+        return Vector2(point.x, point.y);
     }
 }
 

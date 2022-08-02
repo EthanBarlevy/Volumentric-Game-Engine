@@ -21,7 +21,7 @@ int main()
 
 	// this will be moved later
 	std::shared_ptr<vl::Texture> texture = std::make_shared<vl::Texture>();
-	texture->Create(vl::g_renderer, "owo.png");
+	texture->Create(vl::g_renderer, "file_10.bmp");
 
 	{
 		bool quit = false;
@@ -37,7 +37,7 @@ int main()
 			//render
 			vl::g_renderer.BeginFrame();
 
-			vl::g_renderer.Draw(texture, { 0, 0 }, 0);
+			vl::g_renderer.Draw(texture, { 250, 250 }, 0);
 
 			vl::g_renderer.EndFrame();
 		}
