@@ -1,6 +1,6 @@
 #pragma once
 #include "gameObject.h"
-#include "../Renderer/model.h"
+#include "Renderer/model.h"
 
 
 namespace vl

@@ -6,6 +6,17 @@ using namespace std;
 
 int main()
 {
+	// space for testing things in class
+	// ignore all of this
+	int i = 10;
+	float f = 3.5f;
+	bool b = 0; // yes i am that gross
+	const char* s = "hahaha";
+
+	//cout << "true\n";
+	printf("owo %d %.2f %s \n", i, f, s); // ew  this is really bad i am so glad that this is not a thing anymore
+
+
 	vl::InitializeMemory();
 
 	vl::SetFilePath("../Assets");
@@ -21,7 +32,7 @@ int main()
 
 	// this will be moved later
 	std::shared_ptr<vl::Texture> texture = std::make_shared<vl::Texture>();
-	texture->Create(vl::g_renderer, "file_10.bmp");
+	texture->Create(vl::g_renderer, "file_100.bmp");
 
 	{
 		bool quit = false;

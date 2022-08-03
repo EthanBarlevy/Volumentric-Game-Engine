@@ -1,5 +1,6 @@
 #include "texture.h"
 #include "renderer.h"
+#include "Core/logger.h"
 #include <SDL.h>
 #include <SDL_image.h>
 
@@ -14,9 +15,22 @@ namespace vl
     {
         // load surface
         SDL_Surface* surface = IMG_Load(filename.c_str());
+        if (!surface)
+        {
+            LOG(SDL_GetError());
+            return false;
+        }
 
         // create texture
         m_texture = SDL_CreateTextureFromSurface(renderer.m_renderer, surface);
+        if (!m_texture)
+        {
+            LOG(SDL_GetError());
+            SDL_FreeSurface(surface);
+
+            return false;
+        }
+
         SDL_FreeSurface(surface);
 
         return true;
@@ -26,6 +40,7 @@ namespace vl
     {
         SDL_Point point;
         SDL_QueryTexture(m_texture, nullptr, nullptr, &point.x, &point.y);
+
         return Vector2(point.x, point.y);
     }
 }

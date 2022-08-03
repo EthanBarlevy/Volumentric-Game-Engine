@@ -1,5 +1,5 @@
 #include "model.h"
-#include "../Core/file.h"
+#include "Core/file.h"
 #include <sstream>
 #include <iostream>
 

@@ -1,6 +1,6 @@
 #pragma once
-#include "../Math/vector2.h"
-#include "../Math/color.h"
+#include "Math/vector2.h"
+#include "Math/color.h"
 
 struct SDL_Renderer;
 struct SDL_Window;

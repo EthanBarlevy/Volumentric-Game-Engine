@@ -1,5 +1,5 @@
 #pragma once
-#include "../Math/vector2.h"
+#include "Math/vector2.h"
 #include <vector>
 #include <array>
 #include <cstdint>

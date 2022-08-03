@@ -1,4 +1,5 @@
 #include "audioSystem.h"
+#include "Core/logger.h"
 #include <fmod.hpp>
 
 namespace vl
@@ -33,6 +34,8 @@ namespace vl
 		{
 			FMOD::Sound* sound = nullptr;
 			m_fmodSystem->createSound(filename.c_str(), FMOD_DEFAULT, 0, &sound);
+			if (!sound) LOG("Error creating sound: %s", filename.c_str());
+
 			m_sounds[name] = sound;
 		}
 	}
@@ -40,6 +43,9 @@ namespace vl
 	void AudioSystem::PlayAudio(const std::string& name, bool loop)
 	{
 		auto iter = m_sounds.find(name);
+
+		if (iter == m_sounds.end()) LOG("Sound does not exist: %s", name.c_str());
+
 		if (iter != m_sounds.end())
 		{
 			FMOD::Sound* sound = iter->second;
