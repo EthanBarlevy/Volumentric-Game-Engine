@@ -18,6 +18,8 @@ namespace vl
 		static const Color YELLOW;
 		static const Color GREEN;
 		static const Color BLUE;
+		static const Color NAVY;
+		static const Color AQUA;
 		static const Color PURPLE;
 		static const Color PINK;
 		static const Color CLEAR;
