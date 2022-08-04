@@ -57,26 +57,15 @@ namespace vl
 		float GetAngle();
 		static Vector2 Rotate(const Vector2& v, float angle);
 
+		static const Vector2 ONE;
+		static const Vector2 ZERO;
+		static const Vector2 UP;
+		static const Vector2 DOWN;
+		static const Vector2 LEFT;
+		static const Vector2 RIGHT;
 	};
 
-	inline std::istream& operator >> (std::istream& stream, Vector2& v)
-	{
-		std::string line;
-		std::getline(stream, line);
-
-		// { ##, ## }
-		size_t start = line.find("{") + 1;
-		size_t middle = line.find(",");
-		size_t end = line.find("}");
-
-		std::string xs = line.substr(start, middle - start - 1);
-		v.x = std::stof(xs);
-
-		std::string ys = line.substr(middle + 1, end - middle - 2);
-		v.y = std::stof(ys);
-
-		return stream;
-	}
+		std::istream& operator >> (std::istream& stream, Vector2& v);
 
 		inline float Vector2::LengthSqr() 
 		{ 

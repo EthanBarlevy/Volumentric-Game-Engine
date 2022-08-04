@@ -8,6 +8,7 @@ struct SDL_Window;
 namespace vl
 {
 	class Texture;
+	struct Transform;
 
 	class Renderer
 	{
@@ -35,7 +36,8 @@ namespace vl
 		void DrawPoint(const Vector2& v, const Color& color);
 
 		// image
-		void Draw(std::shared_ptr<Texture> texture, const Vector2& position, float angle = 0);
+		void Draw(std::shared_ptr<Texture> texture, const Vector2& position, float angle = 0, const Vector2& scale = Vector2{1, 1}, const Vector2& registration = Vector2{0.5f, 0.5f});
+		void Draw(std::shared_ptr<Texture> texture, const Transform& transform, const Vector2& registration = Vector2{ 0.5f, 0.5f });
 
 		int GetWidth() { return m_width; }
 		int GetHeight() { return m_height; }

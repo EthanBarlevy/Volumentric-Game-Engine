@@ -11,7 +11,7 @@ namespace vl
 		m_radius = CalcRadius();
 	}
 
-	void Model::Draw(Renderer& renderer, const Vector2& position, float angle, float scale)
+	void Model::Draw(Renderer& renderer, const Vector2& position, float angle, const Vector2& scale)
 	{
 		for (int i = 0; i < m_points.size(); i++)
 		{

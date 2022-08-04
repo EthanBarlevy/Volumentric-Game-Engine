@@ -1,6 +1,7 @@
 #pragma once
 #include <cstdint>
 #include <iostream>
+#include <string>
 
 namespace vl
 {
@@ -10,26 +11,18 @@ namespace vl
 	{
 		uint8_t r, g, b, a;
 
+		static const Color WHITE;
+		static const Color BLACK;
+		static const Color RED;
+		static const Color ORANGE;
+		static const Color YELLOW;
+		static const Color GREEN;
+		static const Color BLUE;
+		static const Color PURPLE;
+		static const Color PINK;
+		static const Color CLEAR;
+
 		friend std::istream& operator >> (std::istream& stream, Color& c);
 	};
-	inline std::istream& operator >> (std::istream& stream, Color& c)
-	{
-		std::string line;
-		std::getline(stream, line);
-
-		std::string str;
-		// { #, #, #}
-		str = line.substr(line.find("{") + 2, line.find(",") - (line.find("{") + 2));
-		c.r = (uint8_t)(stof(str) * 255);
-
-		str = line.substr(line.find(",") + 2, (line.find(",", line.find(",") + 1) + 2 - line.find(",") + 2));
-		c.g = (uint8_t)(stof(str) * 255);
-
-		str = line.substr(line.find(",", line.find(",") + 1) + 2, line.find("}", line.find(",", line.find(","))));
-		c.b = (uint8_t)(stof(str) * 255);
-
-		c.a = 255;
-
-		return stream;
-	}
+	std::istream& operator >> (std::istream& stream, Color& c);
 }

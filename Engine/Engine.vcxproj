@@ -164,7 +164,9 @@
     <ClCompile Include="Framework\actor.cpp" />
     <ClCompile Include="Framework\scene.cpp" />
     <ClCompile Include="Input\inputSystem.cpp" />
+    <ClCompile Include="Math\color.cpp" />
     <ClCompile Include="Math\mathUtils.cpp" />
+    <ClCompile Include="Math\vector2.cpp" />
     <ClCompile Include="Renderer\font.cpp" />
     <ClCompile Include="Renderer\model.cpp" />
     <ClCompile Include="Renderer\renderer.cpp" />

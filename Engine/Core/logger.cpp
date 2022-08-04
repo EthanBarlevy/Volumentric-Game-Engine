@@ -2,10 +2,6 @@
 #include <cstdarg>
 #include <iostream>
 
-// dont worry about any of this i just want cute console errors
-#define NC "\e[0m"
-#define RD "\e[0;31m"
-
 namespace vl
 {
 	Logger g_logger; 
@@ -18,7 +14,7 @@ namespace vl
 		char str[1024];
 		vsprintf_s(str, 1024, format, args);
 
-		std::cout << RD << str << NC << std::endl;
+		std::cout << str << std::endl;
 
 		va_end(args);
 
