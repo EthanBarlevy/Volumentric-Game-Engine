@@ -24,7 +24,7 @@ namespace vl
 		float GetRadius() { return 0; }// m_model.GetRadius()* (float)std::max(m_transform.scale.x, m_transform.scale.y); }
 
 		std::string& GetTag() { return m_tag; }
-		Transform GetTransform() { return m_transform; }
+		Transform& GetTransform() { return m_transform; }
 
 		friend class Scene;
 
