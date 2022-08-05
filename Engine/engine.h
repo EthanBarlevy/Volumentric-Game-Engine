@@ -19,6 +19,9 @@
 #include "Renderer/text.h"
 #include "Renderer/texture.h"
 
+#include "Components/playerComponent.h"
+#include "Components/RenderComponents/spriteComponent.h"
+
 #include <memory>
 #include <vector>
 

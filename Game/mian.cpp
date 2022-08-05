@@ -6,44 +6,10 @@ using namespace std;
 
 // ignore 
 
-// code -> preprocessor -> compiler -> (.o, .o, .o) -> linker -> .exe
-// preprocessor stuff
-#define NAME "owo"
-#define YES
-
-
-int add(int a, int b)
-{
-	return a + b;
-}
-
-// this runs at compile time not runtime
-constexpr int add2(int a, int b)
-{
-	return a + b;
-}
-
 int main()
 {
 	// space for testing things in class
 	// ignore all of this
-	
-	// constant expressions
-	// they are wierd and dumb
-	constexpr int i1 = 5;
-	int i2 = add(6, 7);
-	constexpr int i3 = add2(6, 7);
-
-	constexpr float deg = math::RadToDeg(math::PI);
-	cout << NAME << endl;
-	cout << __FILE__ << endl; // gives the filepath of this file
-	cout << __LINE__ << endl; // gives the line that we are on
-	cout << __FUNCTION__ << endl; // gives the name of the function
-
-#ifdef YES
-	cout << "yee" << endl;
-#endif
-
 
 	// the actual code
 	vl::InitializeMemory();
@@ -62,6 +28,15 @@ int main()
 	// this will be moved later
 	std::shared_ptr<vl::Texture> texture = std::make_shared<vl::Texture>();
 	texture->Create(vl::g_renderer, "file_10.bmp");
+	vl::Scene scene;
+	vl::Transform tran{ {100, 100}, 90, {1, 1} };
+	std::unique_ptr<vl::Actor> actor = std::make_unique<vl::Actor>(tran);
+	actor->AddComponent(std::make_unique<vl::PlayerComponent>());
+	std::unique_ptr<vl::SpriteComponent> scom = std::make_unique<vl::SpriteComponent>();
+	scom->m_texture = texture;
+	actor->AddComponent(std::move(scom));
+	scene.Add(std::move(actor));
+
 
 	float angle = 0;
 
@@ -77,10 +52,12 @@ int main()
 			if (vl::g_inputSystem.GetKeyDown(vl::key_escape)) quit = true;
 
 			angle += 180.0f * (float)vl::g_time.deltaTime;
+			scene.Update();
 
 			//render
 			vl::g_renderer.BeginFrame();
 
+			scene.Draw(vl::g_renderer);
 			vl::g_renderer.Draw(texture, { 250, 250 }, angle, {1.0f, 1.0f}, {0.5f, 1.0f});
 
 			vl::g_renderer.EndFrame();

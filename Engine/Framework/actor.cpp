@@ -1,10 +1,31 @@
 #include "actor.h"
-#include "Math/mathUtils.h"
+#include "Components/RenderComponents/renderComponent.h"
 
 namespace vl
 {
+	void Actor::Update()
+	{
+		for (auto& component : m_components)
+		{
+			component->Update();
+		}
+	}
+
 	void Actor::Draw(Renderer& renderer)
 	{
-		m_model.Draw(renderer, m_transform);
+		for (auto& component : m_components)
+		{
+			auto rcom = dynamic_cast<RenderComponent*>(component.get());
+			if (rcom)
+			{
+				rcom->Draw(renderer);
+			}
+		}
+	}
+
+	void Actor::AddComponent(std::unique_ptr<Component> component)
+	{
+		component->m_owner = this;
+		m_components.push_back(std::move(component));
 	}
 }
