@@ -156,6 +156,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Audio\audioSystem.cpp" />
+    <ClCompile Include="Components\audioComponent.cpp" />
+    <ClCompile Include="Components\physicsComponent.cpp" />
     <ClCompile Include="Components\playerComponent.cpp" />
     <ClCompile Include="Components\RenderComponents\spriteComponent.cpp" />
     <ClCompile Include="Core\file.cpp" />
@@ -177,6 +179,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Audio\audioSystem.h" />
+    <ClInclude Include="Components\audioComponent.h" />
+    <ClInclude Include="Components\physicsComponent.h" />
     <ClInclude Include="Components\playerComponent.h" />
     <ClInclude Include="Components\RenderComponents\renderComponent.h" />
     <ClInclude Include="Components\RenderComponents\spriteComponent.h" />

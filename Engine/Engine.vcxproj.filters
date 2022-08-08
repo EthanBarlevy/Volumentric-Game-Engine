@@ -96,6 +96,12 @@
     <ClCompile Include="Components\RenderComponents\spriteComponent.cpp">
       <Filter>Source Files\Components\RenderComponents</Filter>
     </ClCompile>
+    <ClCompile Include="Components\physicsComponent.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\audioComponent.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Math\mathUtils.h">
@@ -134,9 +140,6 @@
     <ClInclude Include="Framework\actor.h">
       <Filter>Source Files\Framework</Filter>
     </ClInclude>
-    <ClInclude Include="engine.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
     <ClInclude Include="Core\time.h">
       <Filter>Source Files\Core</Filter>
     </ClInclude>
@@ -172,6 +175,15 @@
     </ClInclude>
     <ClInclude Include="Components\RenderComponents\spriteComponent.h">
       <Filter>Source Files\Components\RenderComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\audioComponent.h">
+      <Filter>Source Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\physicsComponent.h">
+      <Filter>Source Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="engine.h">
+      <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

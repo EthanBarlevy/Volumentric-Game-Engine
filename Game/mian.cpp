@@ -26,15 +26,25 @@ int main()
 	vl::g_renderer.setClearColor(vl::Color{ 0, 0, 0, 255 });
 
 	// this will be moved later
+	// load stuff
 	std::shared_ptr<vl::Texture> texture = std::make_shared<vl::Texture>();
-	texture->Create(vl::g_renderer, "file_10.bmp");
+	texture->Create(vl::g_renderer, "Sprites/ship.png");
+	vl::g_audioSystem.AddAudio("laser", "Sounds/idk.wav");
 	vl::Scene scene;
-	vl::Transform tran{ {100, 100}, 90, {1, 1} };
+	vl::Transform tran{ {250, 250}, 90, {1, 1} };
 	std::unique_ptr<vl::Actor> actor = std::make_unique<vl::Actor>(tran);
+
+	// add components
 	actor->AddComponent(std::make_unique<vl::PlayerComponent>());
+	actor->AddComponent(std::make_unique<vl::PhysicsComponent>());
 	std::unique_ptr<vl::SpriteComponent> scom = std::make_unique<vl::SpriteComponent>();
 	scom->m_texture = texture;
 	actor->AddComponent(std::move(scom));
+	std::unique_ptr<vl::AudioComponent> acom = std::make_unique<vl::AudioComponent>();
+	acom->m_soundName = "laser";
+	actor->AddComponent(std::move(acom));
+
+	// add to scene
 	scene.Add(std::move(actor));
 
 
@@ -58,7 +68,7 @@ int main()
 			vl::g_renderer.BeginFrame();
 
 			scene.Draw(vl::g_renderer);
-			vl::g_renderer.Draw(texture, { 250, 250 }, angle, {1.0f, 1.0f}, {0.5f, 1.0f});
+			//vl::g_renderer.Draw(texture, { 250, 250 }, angle, {1.0f, 1.0f}, {0.5f, 1.0f});
 
 			vl::g_renderer.EndFrame();
 		}

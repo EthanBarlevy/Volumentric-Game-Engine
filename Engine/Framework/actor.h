@@ -19,6 +19,8 @@ namespace vl
 		virtual void Draw(Renderer& renderer);
 
 		void AddComponent(std::unique_ptr<Component> component);
+		template<typename T>
+		T* GetComponent();
 
 		virtual void OnCollision(Actor* other) {}
 		float GetRadius() { return 0; }// m_model.GetRadius()* (float)std::max(m_transform.scale.x, m_transform.scale.y); }
@@ -40,4 +42,16 @@ namespace vl
 		Vector2 m_velocity;
 		float m_damping = 1;
 	};
+
+	template<typename T>
+	inline T* Actor::GetComponent()
+	{
+		for (auto& component : m_components)
+		{
+			T* result = dynamic_cast<T*>(component.get());
+			if (result) return result;
+		}
+
+		return nullptr;
+	}
 }

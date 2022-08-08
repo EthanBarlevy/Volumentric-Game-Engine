@@ -91,7 +91,7 @@ namespace vl
 		{
 			float length = Length();
 
-			return Vector2{ x / length, y / length };
+			return (length == 0) ? Vector2::ZERO : Vector2{ x / length, y / length };
 		}
 
 		inline void Vector2::Normalize()
