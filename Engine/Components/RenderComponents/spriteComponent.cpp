@@ -1,5 +1,4 @@
 #include "spriteComponent.h"
-#include "Renderer/renderer.h"
 #include "Framework/actor.h"
 
 namespace vl

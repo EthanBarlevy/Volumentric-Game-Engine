@@ -1,5 +1,4 @@
 #include "audioComponent.h"
-#include "Audio/audioSystem.h"
 
 namespace vl
 {

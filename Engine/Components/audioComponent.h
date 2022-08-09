@@ -1,5 +1,5 @@
 #pragma once
-#include "Framework/component.h"
+#include "includes.h"
 
 namespace vl
 {
