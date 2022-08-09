@@ -170,6 +170,7 @@
     <ClCompile Include="Input\inputSystem.cpp" />
     <ClCompile Include="Math\color.cpp" />
     <ClCompile Include="Math\mathUtils.cpp" />
+    <ClCompile Include="Math\matrix2x2.cpp" />
     <ClCompile Include="Math\vector2.cpp" />
     <ClCompile Include="Renderer\font.cpp" />
     <ClCompile Include="Renderer\model.cpp" />
@@ -180,6 +181,7 @@
   <ItemGroup>
     <ClInclude Include="Audio\audioSystem.h" />
     <ClInclude Include="Components\audioComponent.h" />
+    <ClInclude Include="Components\includes.h" />
     <ClInclude Include="Components\physicsComponent.h" />
     <ClInclude Include="Components\playerComponent.h" />
     <ClInclude Include="Components\RenderComponents\renderComponent.h" />
@@ -197,9 +199,11 @@
     <ClInclude Include="Input\inputSystem.h" />
     <ClInclude Include="Math\color.h" />
     <ClInclude Include="Math\mathUtils.h" />
+    <ClInclude Include="Math\matrix2x2.h" />
     <ClInclude Include="Math\random.h" />
     <ClInclude Include="Math\transform.h" />
     <ClInclude Include="Math\vector2.h" />
+    <ClInclude Include="Math\vector3.h" />
     <ClInclude Include="Renderer\font.h" />
     <ClInclude Include="Renderer\model.h" />
     <ClInclude Include="Renderer\renderer.h" />

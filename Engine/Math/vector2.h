@@ -16,6 +16,10 @@ namespace vl
 
 		void Set(float x, float y) { this->x = x; this->y = y; }
 
+		// array operator
+		float operator [] (size_t index) const { return (&x)[index]; }
+		float& operator [] (size_t index) { return (&x)[index]; }
+
 		// arithmetic operators
 		Vector2 operator + (const Vector2& v) const { return Vector2{ this->x + v.x, this->y + v.y }; }
 		Vector2 operator - (const Vector2& v) const { return Vector2{ this->x - v.x, this->y - v.y }; }
