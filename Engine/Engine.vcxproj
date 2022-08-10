@@ -171,6 +171,7 @@
     <ClCompile Include="Math\color.cpp" />
     <ClCompile Include="Math\mathUtils.cpp" />
     <ClCompile Include="Math\matrix2x2.cpp" />
+    <ClCompile Include="Math\matrix3x3.cpp" />
     <ClCompile Include="Math\vector2.cpp" />
     <ClCompile Include="Renderer\font.cpp" />
     <ClCompile Include="Renderer\model.cpp" />
@@ -184,6 +185,7 @@
     <ClInclude Include="Components\includes.h" />
     <ClInclude Include="Components\physicsComponent.h" />
     <ClInclude Include="Components\playerComponent.h" />
+    <ClInclude Include="Components\RenderComponents\modelComponent.h" />
     <ClInclude Include="Components\RenderComponents\renderComponent.h" />
     <ClInclude Include="Components\RenderComponents\spriteComponent.h" />
     <ClInclude Include="Core\file.h" />
@@ -200,6 +202,7 @@
     <ClInclude Include="Math\color.h" />
     <ClInclude Include="Math\mathUtils.h" />
     <ClInclude Include="Math\matrix2x2.h" />
+    <ClInclude Include="Math\matrix3x3.h" />
     <ClInclude Include="Math\random.h" />
     <ClInclude Include="Math\transform.h" />
     <ClInclude Include="Math\vector2.h" />

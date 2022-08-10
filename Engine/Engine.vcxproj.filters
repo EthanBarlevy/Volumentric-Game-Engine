@@ -37,6 +37,9 @@
     <Filter Include="Source Files\Components\RenderComponents">
       <UniqueIdentifier>{7acb3c39-5e82-458f-9793-954cbcdf1da9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Math\Matrix">
+      <UniqueIdentifier>{5cab8a3d-ab39-4042-8fb8-5e33c81a3515}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Math\mathUtils.cpp">
@@ -103,7 +106,10 @@
       <Filter>Source Files\Components</Filter>
     </ClCompile>
     <ClCompile Include="Math\matrix2x2.cpp">
-      <Filter>Source Files\Math</Filter>
+      <Filter>Source Files\Math\Matrix</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\matrix3x3.cpp">
+      <Filter>Source Files\Math\Matrix</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -191,11 +197,17 @@
     <ClInclude Include="Components\includes.h">
       <Filter>Source Files\Components</Filter>
     </ClInclude>
-    <ClInclude Include="Math\matrix2x2.h">
-      <Filter>Source Files\Math</Filter>
-    </ClInclude>
     <ClInclude Include="Math\vector3.h">
       <Filter>Source Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\matrix2x2.h">
+      <Filter>Source Files\Math\Matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\matrix3x3.h">
+      <Filter>Source Files\Math\Matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\RenderComponents\modelComponent.h">
+      <Filter>Source Files\Components\RenderComponents</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
