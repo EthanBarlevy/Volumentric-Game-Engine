@@ -21,6 +21,7 @@
 
 #include "Components/playerComponent.h"
 #include "Components/RenderComponents/spriteComponent.h"
+#include "Components/RenderComponents/modelComponent.h"
 #include "Components/audioComponent.h"
 #include "Components/physicsComponent.h"
 

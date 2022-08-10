@@ -30,16 +30,21 @@ int main()
 	std::shared_ptr<vl::Texture> texture = std::make_shared<vl::Texture>();
 	texture->Create(vl::g_renderer, "Sprites/ship.png");
 	vl::g_audioSystem.AddAudio("laser", "Sounds/idk.wav");
+	std::shared_ptr<vl::Model> model = std::make_shared<vl::Model>("Models/Player.txt");
 	vl::Scene scene;
-	vl::Transform tran{ {250, 250}, 90, {1, 1} };
+	//vl::Transform tran{ {250, 250}, 90, {1, 1} };
+	vl::Transform tran{ {250, 250}, 90, {7, 7} };
 	std::unique_ptr<vl::Actor> actor = std::make_unique<vl::Actor>(tran);
 
 	// add components
 	actor->AddComponent(std::make_unique<vl::PlayerComponent>());
 	actor->AddComponent(std::make_unique<vl::PhysicsComponent>());
-	std::unique_ptr<vl::SpriteComponent> scom = std::make_unique<vl::SpriteComponent>();
-	scom->m_texture = texture;
-	actor->AddComponent(std::move(scom));
+	//std::unique_ptr<vl::SpriteComponent> scom = std::make_unique<vl::SpriteComponent>();
+	//scom->m_texture = texture;
+	//actor->AddComponent(std::move(scom));
+	std::unique_ptr<vl::ModelComponent> mcom = std::make_unique<vl::ModelComponent>();
+	mcom->m_model = model;
+	actor->AddComponent(std::move(mcom));
 	std::unique_ptr<vl::AudioComponent> acom = std::make_unique<vl::AudioComponent>();
 	acom->m_soundName = "laser";
 	actor->AddComponent(std::move(acom));

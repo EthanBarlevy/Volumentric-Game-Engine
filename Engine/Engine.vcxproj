@@ -159,6 +159,7 @@
     <ClCompile Include="Components\audioComponent.cpp" />
     <ClCompile Include="Components\physicsComponent.cpp" />
     <ClCompile Include="Components\playerComponent.cpp" />
+    <ClCompile Include="Components\RenderComponents\modelComponent.cpp" />
     <ClCompile Include="Components\RenderComponents\spriteComponent.cpp" />
     <ClCompile Include="Core\file.cpp" />
     <ClCompile Include="Core\logger.cpp" />

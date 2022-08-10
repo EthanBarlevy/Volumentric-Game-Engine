@@ -111,6 +111,9 @@
     <ClCompile Include="Math\matrix3x3.cpp">
       <Filter>Source Files\Math\Matrix</Filter>
     </ClCompile>
+    <ClCompile Include="Components\RenderComponents\modelComponent.cpp">
+      <Filter>Source Files\Components\RenderComponents</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Math\mathUtils.h">
