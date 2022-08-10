@@ -46,7 +46,7 @@ namespace vl
 
 		// compare
 		bool operator == (const Vector3& v) const { return (this->x == v.x && this->y == v.y && this->z == v.z); }
-		bool operator != (const Vector3& v) const { return !(this == v); }
+		bool operator != (const Vector3& v) const { return !(*this == v); }
 
 		// functions
 		float LengthSqr();
@@ -66,7 +66,7 @@ namespace vl
 
 	inline float Vector3::Length()
 	{
-		return std::sqrt(x * x + y * y + z * z);
+		return std::sqrt(LengthSqr());
 	}
 
 	inline float Vector3::DistanceSqr(const Vector3& v)
@@ -82,7 +82,7 @@ namespace vl
 	inline Vector3 Vector3::Normalized()
 	{
 		float length = Length();
-		return (length == 0) ? {0, 0, 0} : Vector3{ x / length, y / length, z / length };
+		return (length == 0) ? Vector3{0, 0, 0} : Vector3{ x / length, y / length, z / length };
 	}
 
 	inline void Vector3::Normalize()

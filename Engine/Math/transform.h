@@ -1,6 +1,6 @@
 #pragma once
 #include "vector2.h"
-#include "matrix2x2.h"
+#include "matrix3x3.h"
 #include "mathUtils.h"
 
 namespace vl 
@@ -11,13 +11,13 @@ namespace vl
 		float rotation{ 0 };
 		Vector2 scale{ 1, 1 };
 
-		operator Matrix2x2 () const
+		operator Matrix3x3 () const
 		{
-			// translation will be added later when we make a matrix3x3 struct
-			Matrix2x2 mxS = Matrix2x2::CreateScale(scale);
-			Matrix2x2 mxR = Matrix2x2::CreateRotation(math::DegToRad(rotation));
+			Matrix3x3 mxS = Matrix3x3::CreateScale(scale);
+			Matrix3x3 mxR = Matrix3x3::CreateRotation(math::DegToRad(rotation));
+			Matrix3x3 mxT = Matrix3x3::CreateTranslation(position);
 
-			return { mxS * mxR };
+			return { mxS * mxR * mxT };
 		}
 	};
 }
