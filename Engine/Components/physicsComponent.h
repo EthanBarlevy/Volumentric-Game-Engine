@@ -16,6 +16,6 @@ namespace vl
 		Vector2 m_velocity{ Vector2::ZERO };
 		Vector2 m_acceleration{ Vector2::ZERO };
 
-		float m_damping{ 0 };
+		float m_damping{ 0.7f };
 	};
 }

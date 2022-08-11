@@ -1,5 +1,7 @@
 #include "model.h"
 #include "Core/file.h"
+#include "Core/logger.h"
+#include "Math/mathUtils.h"
 #include <sstream>
 #include <iostream>
 
@@ -11,8 +13,19 @@ namespace vl
 		m_radius = CalcRadius();
 	}
 
+	bool Model::Create(const std::string& filename)
+	{
+		if (!Load(filename))
+		{
+			LOG("Error could not create model : %s", filename.c_str());
+			return false;
+		}
+		return true;
+	}
+
 	void Model::Draw(Renderer& renderer, const Vector2& position, float angle, const Vector2& scale)
 	{
+		if (!m_points.size()) return;
 		for (int i = 0; i < m_points.size(); i++)
 		{
 			vl::Vector2 p1 = Vector2::Rotate((m_points[i] * scale), angle) + position;
@@ -23,18 +36,25 @@ namespace vl
 	}
 	void Model::Draw(Renderer& renderer, const Transform& transform)
 	{
+		Matrix3x3 mx = transform.matrix;
+		//if (!m_points.size()) return;
+
 		for (int i = 0; i < m_points.size(); i++)
 		{
-			vl::Vector2 p1 = Vector2::Rotate((m_points[i] * transform.scale), transform.rotation) + transform.position;
-			vl::Vector2 p2 = Vector2::Rotate((m_points[(i + 1) % m_points.size()] * transform.scale), transform.rotation) + transform.position;
+			vl::Vector2 p1 = mx * m_points[i];
+			vl::Vector2 p2 = mx * m_points[(i + 1) % m_points.size()];
 
 			renderer.DrawLine(p1, p2, m_color);
 		}
 	}
-	void Model::Load(const std::string& filename)
+	bool Model::Load(const std::string& filename)
 	{
 		std::string buffer;
-		vl::ReadFile(filename, buffer);
+		if (!vl::ReadFile(filename, buffer))
+		{
+			LOG("Error could not load file : %s", filename.c_str());
+			return false;
+		}
 
 		// color being implemented 
 		std::istringstream stream(buffer);
@@ -58,6 +78,7 @@ namespace vl
 		}
 
 		//std::cout << line << std::endl;
+		return true;
 	}
 
 	float Model::CalcRadius()

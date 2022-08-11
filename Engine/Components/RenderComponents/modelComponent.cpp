@@ -6,7 +6,7 @@ namespace vl
 {
 	void vl::ModelComponent::Update()
 	{
-
+		//
 	}
 
 	void vl::ModelComponent::Draw(Renderer& renderer)

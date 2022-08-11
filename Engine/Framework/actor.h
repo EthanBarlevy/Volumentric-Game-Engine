@@ -18,6 +18,8 @@ namespace vl
 		virtual void Update() override;
 		virtual void Draw(Renderer& renderer);
 
+		void AddChild(std::unique_ptr<Actor> child);
+
 		void AddComponent(std::unique_ptr<Component> component);
 		template<typename T>
 		T* GetComponent();
@@ -32,8 +34,10 @@ namespace vl
 
 	protected:
 		Scene* m_scene{ nullptr };
+		Actor* m_parent{ nullptr };
 		Transform m_transform;
 		std::vector<std::unique_ptr<Component>> m_components;
+		std::vector<std::unique_ptr<Actor>> m_children;
 
 		std::string m_tag;
 		bool m_destroy{ false };
