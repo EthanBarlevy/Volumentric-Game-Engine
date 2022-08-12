@@ -11,6 +11,14 @@ namespace vl
         if (m_texture) SDL_DestroyTexture(m_texture);
     }
 
+    bool Texture::Create(const std::string& name, void* data)
+    {
+        // check that data is not null;
+        Renderer* renderer = static_cast<Renderer*>(data);
+
+        return Create(*renderer, name);
+    }
+
     bool Texture::Create(Renderer& renderer, const std::string& filename)
     {
         // load surface

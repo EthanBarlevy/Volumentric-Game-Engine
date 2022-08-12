@@ -10,6 +10,8 @@
 
 #include "Audio/audioSystem.h"
 
+#include "Resource/resourceManager.h"
+
 #include "Framework/scene.h"
 #include "Framework/game.h"
 
@@ -35,4 +37,5 @@ namespace vl
 	extern Renderer g_renderer;
 	extern Time g_time;
 	extern AudioSystem g_audioSystem;
+	extern ResourceManager g_resourceManager;
 }

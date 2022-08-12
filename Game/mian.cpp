@@ -20,6 +20,7 @@ int main()
 	vl::g_renderer.Initialize();
 	vl::g_inputSystem.Initialize();
 	vl::g_audioSystem.Initialize();
+	vl::g_resourceManager.Initialize();
 
 	// create window
 	vl::g_renderer.CreateWindow("Gaming", 500, 500);
@@ -27,18 +28,16 @@ int main()
 
 	// this will be moved later
 	// load stuff
-	std::shared_ptr<vl::Texture> texture = std::make_shared<vl::Texture>();
-	texture->Create(vl::g_renderer, "Sprites/ship.png");
 	vl::g_audioSystem.AddAudio("laser", "Sounds/idk.wav");
-	std::shared_ptr<vl::Model> model = std::make_shared<vl::Model>();
-	model->Create("Models/Player.txt");
 	vl::Scene scene;
-#define _model
+#define _model0
 #ifdef _model
 	vl::Transform tran{ {250, 250}, 90, {7, 7} };
 #else
-	vl::Transform tran{ {250, 250}, 90, {1, 1} };
+	vl::Transform tran{ {250, 250}, 90, {0.8f, 0.8f} };
 #endif
+
+
 	std::unique_ptr<vl::Actor> actor = std::make_unique<vl::Actor>(tran);
 
 	// add components
@@ -46,11 +45,11 @@ int main()
 	actor->AddComponent(std::make_unique<vl::PhysicsComponent>());
 #ifdef _model
 	std::unique_ptr<vl::ModelComponent> mcom = std::make_unique<vl::ModelComponent>();
-	mcom->m_model = model;
+	mcom->m_model = vl::g_resourceManager.Get<vl::Model>("Models/Player.txt");
 	actor->AddComponent(std::move(mcom));
 #else
 	std::unique_ptr<vl::SpriteComponent> scom = std::make_unique<vl::SpriteComponent>();
-	scom->m_texture = texture;
+	scom->m_texture = vl::g_resourceManager.Get<vl::Texture>("Sprites/large_purple_01.png", &vl::g_renderer);
 	actor->AddComponent(std::move(scom));
 #endif
 	std::unique_ptr<vl::AudioComponent> acom = std::make_unique<vl::AudioComponent>();
@@ -61,7 +60,7 @@ int main()
 	vl::Transform tranC{ {0, 7}, 0, {1, 1} };
 	std::unique_ptr<vl::Actor> child = std::make_unique<vl::Actor>(tranC);
 	std::unique_ptr<vl::ModelComponent> mcomC = std::make_unique<vl::ModelComponent>();
-	mcomC->m_model = model;
+	mcomC->m_model = vl::g_resourceManager.Get<vl::Model>("Models/Player.txt");
 	child->AddComponent(std::move(mcomC));
 
 	actor->AddChild(std::move(child));

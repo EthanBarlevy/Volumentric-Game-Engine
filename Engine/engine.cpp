@@ -6,4 +6,5 @@ namespace vl
 	Renderer g_renderer;
 	Time g_time;
 	AudioSystem g_audioSystem;
+	ResourceManager g_resourceManager;
 }

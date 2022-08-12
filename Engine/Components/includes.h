@@ -2,6 +2,7 @@
 #include "Input/inputSystem.h"
 #include "Audio/audioSystem.h"
 #include "Renderer/renderer.h"
+#include "Resource/resourceManager.h"
 #include "Core/time.h"
 #include "Framework/component.h"
 
@@ -11,4 +12,5 @@ namespace vl
 	extern Renderer g_renderer;
 	extern Time g_time;
 	extern AudioSystem g_audioSystem;
+	extern ResourceManager g_resourceManager;
 }
