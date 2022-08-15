@@ -72,6 +72,8 @@ int main()
 	vl::g_audioSystem.Initialize();
 	vl::g_resourceManager.Initialize();
 
+	vl::Engine::Instance().Register();
+
 	// create window
 	vl::g_renderer.CreateWindow("Gaming", 500, 500);
 	vl::g_renderer.setClearColor(vl::Color{ 0, 0, 0, 255 });
@@ -88,11 +90,13 @@ int main()
 #endif
 
 
-	std::unique_ptr<vl::Actor> actor = std::make_unique<vl::Actor>(tran);
+	//std::unique_ptr<vl::Actor> actor = std::make_unique<vl::Actor>(tran);
+	std::unique_ptr<vl::Actor> actor = vl::Factory::Instance().Create<vl::Actor>("Actor");
+	actor->GetTransform() = tran;
 
 	// add components
-	actor->AddComponent(std::make_unique<vl::PlayerComponent>());
-	actor->AddComponent(std::make_unique<vl::PhysicsComponent>());
+	actor->AddComponent(vl::Factory::Instance().Create<vl::Component>("PlayerComponent"));
+	actor->AddComponent(vl::Factory::Instance().Create<vl::Component>("PhysicsComponent"));
 #ifdef _model
 	std::unique_ptr<vl::ModelComponent> mcom = std::make_unique<vl::ModelComponent>();
 	mcom->m_model = vl::g_resourceManager.Get<vl::Model>("Models/Player.txt");

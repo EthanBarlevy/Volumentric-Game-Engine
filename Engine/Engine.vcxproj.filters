@@ -224,5 +224,11 @@
     <ClInclude Include="Resource\resourceManager.h">
       <Filter>Source Files\Resource</Filter>
     </ClInclude>
+    <ClInclude Include="Framework\singleton.h">
+      <Filter>Source Files\Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\factory.h">
+      <Filter>Source Files\Framework</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

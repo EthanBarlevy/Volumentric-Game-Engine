@@ -27,7 +27,7 @@ namespace vl
 		float thrust = 0;
 		if (vl::g_inputSystem.GetKeyDown(vl::key_up))
 		{
-			thrust = 10000;
+			thrust = 5000;
 		}
 
 		auto component = m_owner->GetComponent<PhysicsComponent>();

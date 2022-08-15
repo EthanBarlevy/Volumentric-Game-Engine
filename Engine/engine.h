@@ -3,10 +3,10 @@
 #include "Core/file.h"
 #include "Core/time.h"
 
-#include "Input/inputSystem.h"
-
 #include "Math/mathUtils.h"
 #include "Math/random.h"
+
+#include "Input/inputSystem.h"
 
 #include "Audio/audioSystem.h"
 
@@ -14,6 +14,8 @@
 
 #include "Framework/scene.h"
 #include "Framework/game.h"
+#include "Framework/singleton.h"
+#include "Framework/factory.h"
 
 #include "Renderer/renderer.h"
 #include "Renderer/model.h"
@@ -38,4 +40,10 @@ namespace vl
 	extern Time g_time;
 	extern AudioSystem g_audioSystem;
 	extern ResourceManager g_resourceManager;
+
+	class Engine : public Singleton<Engine>
+	{
+	public:
+		void Register();
+	};
 }

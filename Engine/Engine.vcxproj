@@ -197,9 +197,11 @@
     <ClInclude Include="engine.h" />
     <ClInclude Include="Framework\actor.h" />
     <ClInclude Include="Framework\component.h" />
+    <ClInclude Include="Framework\factory.h" />
     <ClInclude Include="Framework\game.h" />
     <ClInclude Include="Framework\gameObject.h" />
     <ClInclude Include="Framework\scene.h" />
+    <ClInclude Include="Framework\singleton.h" />
     <ClInclude Include="Input\inputSystem.h" />
     <ClInclude Include="Math\color.h" />
     <ClInclude Include="Math\mathUtils.h" />

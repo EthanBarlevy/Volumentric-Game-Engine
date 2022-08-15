@@ -1,6 +1,8 @@
 #pragma once
 #include "Math/transform.h"
 
+#define REGISTER_CLASS(class) Factory::Instance().Register<class>(#class)
+
 namespace vl
 {
 	class GameObject
