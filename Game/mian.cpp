@@ -5,12 +5,62 @@
 using namespace std;
 
 // ignore 
+class Singleton
+{
+public:
+	// 4 implicit functions
+	// constructor
+	//Singleton() { std::cout << "create\n"; }
+	// destructor
+	~Singleton() { std::cout << "destroy\n"; }
+	// copy constructor
+	//Singleton(const Singleton& other) { std::cout << "copy\n"; }
+	Singleton(const Singleton& other) = delete;
+	// assignment constructor
+	//Singleton& operator = (const Singleton& other) { std::cout << "assingment\n"; return *this; }
+	Singleton& operator = (const Singleton& other) = delete;
+
+	void Say() { std::cout << "uwu\n"; }
+
+	// this will make sure that we can only ever create one instance of anyting
+	static Singleton& Instance()
+	{
+		static Singleton instance;
+		return instance;
+	}
+
+private:
+	Singleton() { std::cout << "create\n"; }
+
+};
+
+void f()
+{
+	static int c = 0;
+	c++;
+	std::cout << c << std::endl;
+}
 
 int main()
 {
 	// space for testing things in class
 	// ignore all of this
 
+	f();
+	f();
+	f();
+	f();
+
+	Singleton::Instance().Say();
+
+	{
+		// blocked scope
+		//Singleton s1;
+		//Singleton s2(s1);
+		//Singleton s3;
+		//s3 = s1;
+	}
+	
 	// the actual code
 	vl::InitializeMemory();
 
