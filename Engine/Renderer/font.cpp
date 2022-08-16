@@ -13,9 +13,12 @@ namespace vl
 		if (m_ttfFont) TTF_CloseFont(m_ttfFont);
 	}
 
-	bool Font::Create(const std::string& name, void* data)
+	bool Font::Create(const std::string& name, ...)
 	{
-		Load(name, (int)data);
+		va_list args;
+		va_start(args, name);
+
+		Load(name, va_arg(args, int));
 		return false;
 	}
 

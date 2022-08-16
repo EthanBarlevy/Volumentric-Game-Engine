@@ -219,6 +219,9 @@
     <ClInclude Include="Resource\resource.h" />
     <ClInclude Include="Resource\resourceManager.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\Build\Assets\level.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

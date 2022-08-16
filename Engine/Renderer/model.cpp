@@ -13,7 +13,7 @@ namespace vl
 		m_radius = CalcRadius();
 	}
 
-	bool Model::Create(const std::string& filename, void* data)
+	bool Model::Create(const std::string& filename, ...)
 	{
 		if (!Load(filename))
 		{

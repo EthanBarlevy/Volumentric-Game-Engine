@@ -9,7 +9,7 @@ namespace vl
 
 	void ResourceManager::Shutodwn()
 	{
-		//
+		m_resources.clear();
 	}
 }
 
