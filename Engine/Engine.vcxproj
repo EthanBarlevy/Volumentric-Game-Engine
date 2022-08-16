@@ -220,6 +220,7 @@
     <ClInclude Include="Resource\resource.h" />
     <ClInclude Include="Resource\resourceManager.h" />
     <ClInclude Include="Serialization\json.h" />
+    <ClInclude Include="Serialization\serializable.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\Build\Assets\json.txt" />

@@ -239,6 +239,9 @@
     <ClInclude Include="Serialization\json.h">
       <Filter>Source Files\Serialization</Filter>
     </ClInclude>
+    <ClInclude Include="Serialization\serializable.h">
+      <Filter>Source Files\Serialization</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\Build\Assets\level.txt">

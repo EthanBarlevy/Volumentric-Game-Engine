@@ -18,9 +18,9 @@ namespace vl
 		va_list args;
 		va_start(args, name);
 		int size = va_arg(args, int);
+		va_end(args);
 
 		Load(name, size);
-		va_end(args);
 
 		return false;
 	}
