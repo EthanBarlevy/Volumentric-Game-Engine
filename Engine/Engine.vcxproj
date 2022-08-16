@@ -222,6 +222,7 @@
     <ClInclude Include="Serialization\json.h" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="..\Build\Assets\json.txt" />
     <Text Include="..\Build\Assets\level.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -96,7 +96,7 @@ namespace vl::json
 
     bool Get(const rapidjson::Value& value, const std::string& name, Color& data)
     {
-        if (!value.HasMember(name.c_str()) || !value[name.c_str()].IsArray() || value[name.c_str()].Size() != 2)
+        if (!value.HasMember(name.c_str()) || !value[name.c_str()].IsArray() || value[name.c_str()].Size() != 4)
         {
             LOG("error reading json data %s", name.c_str());
             return false;

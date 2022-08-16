@@ -244,5 +244,8 @@
     <Text Include="..\Build\Assets\level.txt">
       <Filter>Resource Files</Filter>
     </Text>
+    <Text Include="..\Build\Assets\json.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>
