@@ -13,8 +13,9 @@ namespace vl
 		m_radius = CalcRadius();
 	}
 
-	bool Model::Create(const std::string& filename, ...)
+	bool Model::Create(std::string filename, ...)
 	{
+
 		if (!Load(filename))
 		{
 			LOG("Error could not create model : %s", filename.c_str());

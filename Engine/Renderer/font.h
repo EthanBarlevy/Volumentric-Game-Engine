@@ -13,7 +13,7 @@ namespace vl
 		Font(const std::string& filename, int fontSize);
 		~Font();
 
-		bool Create(const std::string& name, ...) override ;
+		bool Create(std::string name, ...) override ;
 		void Load(const std::string& filename, int fontSize);
 
 		friend class Text;

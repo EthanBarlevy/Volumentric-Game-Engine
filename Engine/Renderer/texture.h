@@ -15,7 +15,7 @@ namespace vl
 		Texture() = default;
 		~Texture();
 
-		bool Create(const std::string& name, ...) override;
+		bool Create(std::string name, ...) override;
 		bool Create(Renderer& renderer, const std::string& filename);
 
 		Vector2 GetSize() const;
