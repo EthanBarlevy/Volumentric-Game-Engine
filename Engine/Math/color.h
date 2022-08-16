@@ -11,6 +11,9 @@ namespace vl
 	{
 		uint8_t r, g, b, a;
 
+		uint8_t operator [] (size_t index) const { return (&r)[index]; }
+		uint8_t& operator [] (size_t index) { return (&r)[index]; }
+
 		static const Color WHITE;
 		static const Color BLACK;
 		static const Color RED;
@@ -27,4 +30,5 @@ namespace vl
 		friend std::istream& operator >> (std::istream& stream, Color& c);
 	};
 	std::istream& operator >> (std::istream& stream, Color& c);
+	std::ostream& operator << (std::ostream& stream, const Color& v);
 }

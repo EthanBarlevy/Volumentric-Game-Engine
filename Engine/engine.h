@@ -1,4 +1,7 @@
 #pragma once
+
+#include "Serialization/json.h"
+
 #include "Core/memory.h"
 #include "Core/file.h"
 #include "Core/time.h"
