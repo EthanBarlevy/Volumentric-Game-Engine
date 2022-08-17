@@ -1,8 +1,43 @@
 #include "actor.h"
+#include "factory.h"
+#include "Core/logger.h"
 #include "Components/RenderComponents/renderComponent.h"
 
 namespace vl
 {
+	bool Actor::Write(const rapidjson::Value& value) const
+	{
+		return false;
+	}
+
+	bool Actor::Read(const rapidjson::Value& value)
+	{
+		READ_DATA(value, tag);
+		READ_DATA(value, name);
+
+		m_transform.Read(value["transform"]);
+
+		if (!value.HasMember("components") || !value["components"].IsArray())
+		{
+			LOG("No components in json file");
+			return false;
+		}
+
+		for (auto& componentValue : value["components"].GetArray())
+		{
+			std::string type;
+			READ_DATA(componentValue, type);
+			auto component = Factory::Instance().Create<Component>(type);
+			if (component)
+			{
+				component->Read(componentValue);
+				AddComponent(std::move(component));
+			}
+		}
+
+		return true;
+	}
+
 	void Actor::Update()
 	{
 		for (auto& component : m_components)

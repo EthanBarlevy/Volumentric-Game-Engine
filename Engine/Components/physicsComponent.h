@@ -8,6 +8,9 @@ namespace vl
 	{
 	public:
 		PhysicsComponent() = default;
+		
+		virtual bool Write(const rapidjson::Value& value) const override;
+		virtual bool Read(const rapidjson::Value& value) override;
 
 		void Update() override;
 		void ApplyForce(const Vector2& force) { m_acceleration += force; }
@@ -17,5 +20,6 @@ namespace vl
 		Vector2 m_acceleration{ Vector2::ZERO };
 
 		float m_damping{ 0.7f };
+
 	};
 }

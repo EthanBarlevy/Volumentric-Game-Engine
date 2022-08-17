@@ -8,6 +8,9 @@ namespace vl
 	public:
 		AudioComponent() = default;
 
+		virtual bool Write(const rapidjson::Value& value) const override;
+		virtual bool Read(const rapidjson::Value& value) override;
+
 		void Update() override;
 		void Play();
 		void Stop();
@@ -18,6 +21,8 @@ namespace vl
 		bool m_loop{ false };
 		float m_volume{ 1 };
 		float m_pitch{ 1 };
+
+
 
 	};
 }

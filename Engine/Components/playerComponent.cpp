@@ -6,9 +6,16 @@
 
 namespace vl
 {
-	// i refuse to include engine.h i think that its weird because its almost recursive
-	extern InputSystem g_inputSystem;
-	extern Time g_time;
+	bool PlayerComponent::Write(const rapidjson::Value& value) const
+	{
+		return false;
+	}
+	bool PlayerComponent::Read(const rapidjson::Value& value)
+	{
+		READ_DATA(value, speed);
+
+		return true;
+	}
 
 	void PlayerComponent::Update()
 	{
@@ -27,7 +34,7 @@ namespace vl
 		float thrust = 0;
 		if (vl::g_inputSystem.GetKeyDown(vl::key_up))
 		{
-			thrust = 5000;
+			thrust = speed;
 		}
 
 		auto component = m_owner->GetComponent<PhysicsComponent>();

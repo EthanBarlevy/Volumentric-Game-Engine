@@ -1,5 +1,6 @@
 #pragma once
 #include "Math/transform.h"
+#include "Serialization/serializable.h"
 
 #define REGISTER_CLASS(class) Factory::Instance().Register<class>(#class)
 

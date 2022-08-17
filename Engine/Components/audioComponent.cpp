@@ -2,11 +2,20 @@
 
 namespace vl
 {
-	extern AudioSystem g_audioSystem;
+	
+	bool AudioComponent::Write(const rapidjson::Value& value) const
+	{
+		return false;
+	}
+
+	bool AudioComponent::Read(const rapidjson::Value& value)
+	{
+		return false;
+	}
 
 	void AudioComponent::Update()
 	{
-
+		//
 	}
 
 	void AudioComponent::Play()
@@ -18,5 +27,6 @@ namespace vl
 	{
 
 	}
+
 
 }

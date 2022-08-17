@@ -22,7 +22,14 @@ int main()
 	vl::g_renderer.CreateWindow("Gaming", 500, 500);
 	vl::g_renderer.setClearColor(vl::Color{ 0, 0, 0, 255 });
 
+	// create scene
 	vl::Scene scene;
+
+	// load from json file to scene
+	rapidjson::Document document;
+	bool sucess = vl::json::Load("level.txt", document);
+	scene.Read(document);
+
 
 	{
 		bool quit = false;

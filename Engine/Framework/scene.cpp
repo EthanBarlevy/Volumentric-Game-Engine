@@ -1,4 +1,6 @@
 #include "scene.h"
+#include "factory.h"
+#include "Core/logger.h"
 #include <algorithm>
 
 namespace vl
@@ -51,5 +53,34 @@ namespace vl
 	{
 		actor->m_scene = this;
 		m_actors.push_back(std::move(actor));
+	}
+
+	bool Scene::Write(const rapidjson::Value& value) const
+	{
+		return false; // im returning false because we are not implementing this
+	}
+
+	bool Scene::Read(const rapidjson::Value& value)
+	{
+		if (!value.HasMember("actors") || !value["actors"].IsArray())
+		{
+			LOG("No actors in json file");
+			return false;
+		}
+
+		// read actors
+		for (auto& actorValue : value["actors"].GetArray())
+		{
+			std::string type;
+			READ_DATA(actorValue, type);
+			auto actor = Factory::Instance().Create<Actor>(type);
+			if (actor)
+			{
+				actor->Read(actorValue);
+				Add(std::move(actor));
+			}
+		}
+
+		return true;
 	}
 }
