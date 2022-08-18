@@ -160,6 +160,7 @@
     <ClCompile Include="Components\physicsComponent.cpp" />
     <ClCompile Include="Components\playerComponent.cpp" />
     <ClCompile Include="Components\RenderComponents\modelComponent.cpp" />
+    <ClCompile Include="Components\RenderComponents\spriteAnimComponent.cpp" />
     <ClCompile Include="Components\RenderComponents\spriteComponent.cpp" />
     <ClCompile Include="Core\file.cpp" />
     <ClCompile Include="Core\logger.cpp" />
@@ -191,6 +192,7 @@
     <ClInclude Include="Components\playerComponent.h" />
     <ClInclude Include="Components\RenderComponents\modelComponent.h" />
     <ClInclude Include="Components\RenderComponents\renderComponent.h" />
+    <ClInclude Include="Components\RenderComponents\spriteAnimComponent.h" />
     <ClInclude Include="Components\RenderComponents\spriteComponent.h" />
     <ClInclude Include="Core\file.h" />
     <ClInclude Include="Core\logger.h" />

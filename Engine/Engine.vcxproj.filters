@@ -129,6 +129,9 @@
     <ClCompile Include="Math\transform.cpp">
       <Filter>Source Files\Math</Filter>
     </ClCompile>
+    <ClCompile Include="Components\RenderComponents\spriteAnimComponent.cpp">
+      <Filter>Source Files\Components\RenderComponents</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Math\mathUtils.h">
@@ -247,6 +250,9 @@
     </ClInclude>
     <ClInclude Include="Math\rect.h">
       <Filter>Source Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\RenderComponents\spriteAnimComponent.h">
+      <Filter>Source Files\Components\RenderComponents</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
