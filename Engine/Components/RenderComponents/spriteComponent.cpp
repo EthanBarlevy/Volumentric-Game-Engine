@@ -9,7 +9,11 @@ namespace vl
 	}
 	bool SpriteComponent::Read(const rapidjson::Value& value)
 	{
-		return false;
+		std::string texture_name;
+		READ_DATA(value, texture_name);
+
+		m_texture = g_resourceManager.Get<Texture>(texture_name);
+		return true;
 	}
 	
 	void SpriteComponent::Update()

@@ -16,7 +16,7 @@ namespace vl
 		void Stop();
 
 	public:
-		std::string m_soundName;
+		std::string sound_name;
 		bool m_playOnAwake{ false };
 		bool m_loop{ false };
 		float m_volume{ 1 };

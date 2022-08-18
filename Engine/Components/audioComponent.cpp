@@ -10,7 +10,8 @@ namespace vl
 
 	bool AudioComponent::Read(const rapidjson::Value& value)
 	{
-		return false;
+		READ_DATA(value, sound_name);
+		return true;
 	}
 
 	void AudioComponent::Update()
@@ -20,7 +21,7 @@ namespace vl
 
 	void AudioComponent::Play()
 	{
-		g_audioSystem.PlayAudio(m_soundName, m_loop);
+		g_audioSystem.PlayAudio(sound_name, m_loop);
 	}
 
 	void AudioComponent::Stop()

@@ -10,8 +10,8 @@
                250
             ],
             "scale":[
-               7,
-               7
+               2,
+               2
             ],
             "rotation":0
          },
@@ -21,20 +21,16 @@
                "speed":5000
             },
             {
-               "type":"ModelComponent",
-               "model_name":"Models/Player.txt"
+               "type":"PhysicsComponent",
+               "damping":0.99
             },
             {
-               "type":"PhysicsComponent",
-               "damping":0.7f,
-               "velocity":[
-                  0,
-                  0
-               ],
-               "acceleration":[
-                  0,
-                  0
-               ]
+               "type":"SpriteComponent",
+               "texture_name":"Sprites/large_purple_01.png"
+            },
+            {
+               "type":"AudioComponent",
+               "sound_name":"sounds/idk.wav"
             }
          ]
       }

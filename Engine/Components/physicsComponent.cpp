@@ -10,15 +10,19 @@ namespace vl
 	}
 	bool PhysicsComponent::Read(const rapidjson::Value& value)
 	{
-		return false;
+		READ_DATA(value, damping);
+		READ_DATA(value, velocity);
+		READ_DATA(value, acceleration);
+
+		return true;
 	}
 
 	void PhysicsComponent::Update()
 	{
-		m_velocity += m_acceleration * (float)g_time.deltaTime;
-		m_velocity *= m_damping;
-		m_owner->GetTransform().position += m_velocity * (float)g_time.deltaTime;
+		velocity += acceleration * (float)g_time.deltaTime;
+		velocity *= damping;
+		m_owner->GetTransform().position += velocity * (float)g_time.deltaTime;
 
-		m_acceleration = Vector2::ZERO;
+		acceleration = Vector2::ZERO;
 	}
 }
