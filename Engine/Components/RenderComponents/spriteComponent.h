@@ -1,5 +1,6 @@
 #pragma once
 #include "renderComponent.h"
+#include "Math/rect.h"
 
 namespace vl
 {
@@ -16,6 +17,7 @@ namespace vl
 
 	public:
 		std::shared_ptr<Texture> m_texture;
+		Rect source;
 
 	};
 }

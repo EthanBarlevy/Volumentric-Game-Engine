@@ -3,6 +3,7 @@
 #include "Core/logger.h"
 #include "Math/vector2.h"
 #include "Math/color.h"
+#include "Math/rect.h"
 #include <fstream>
 
 namespace vl::json
@@ -108,11 +109,29 @@ namespace vl::json
         {
             if (!array[1].IsInt())
             {
-                LOG("error reading json data (not a float) %s", name.c_str());
+                LOG("error reading json data (not an int) %s", name.c_str());
                 return false;
             }
             data[i] = array[i].GetInt();
         }
+        return true;
+    }
+
+    bool Get(const rapidjson::Value& value, const std::string& name, Rect& data)
+    {
+        if (!value.HasMember(name.c_str()) || !value[name.c_str()].IsArray() || value[name.c_str()].Size() != 4)
+        {
+            LOG("error reading json data %s", name.c_str());
+            return false;
+        }
+
+        auto& array = value[name.c_str()];
+
+        data.x = array[0].GetInt();
+        data.y = array[1].GetInt();
+        data.w = array[2].GetInt();
+        data.h = array[3].GetInt();
+
         return true;
     }
 

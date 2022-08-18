@@ -18,15 +18,21 @@
          "components":[
             {
                "type":"PlayerComponent",
-               "speed":5000
+               "speed":500
             },
             {
                "type":"PhysicsComponent",
-               "damping":0.99
+               "damping":0.95
             },
             {
                "type":"SpriteComponent",
-               "texture_name":"Sprites/large_purple_01.png"
+               "texture_name":"Sprites/gothic-hero-idle.png",
+               "source":[
+                  0, 
+                  0, 
+                  32, 
+                  40
+               ]
             },
             {
                "type":"AudioComponent",

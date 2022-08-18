@@ -44,9 +44,9 @@ namespace vl
 			Vector2 force = Vector2::Rotate(Vector2::RIGHT, math::DegToRad(m_owner->GetTransform().rotation)) * thrust;
 			component->ApplyForce(force);
 
-			// gravity
-			force = (Vector2{ 250, 250 } - m_owner->GetTransform().position).Normalized() * 1000.0f;
-			component->ApplyForce(force);
+			//// gravity
+			//force = (Vector2{ 250, 250 } - m_owner->GetTransform().position).Normalized() * 1000.0f;
+			//component->ApplyForce(force);
 		}
 
 		m_owner->GetTransform().position += direction * 300 * (float)g_time.deltaTime;

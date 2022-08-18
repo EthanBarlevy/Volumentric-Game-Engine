@@ -1,6 +1,7 @@
 #include "renderer.h"
 #include "texture.h"
 #include "Math/transform.h"
+#include "Math/rect.h"
 #include <SDL.h>
 #include <SDL_ttf.h>
 #include <SDL_image.h>
@@ -104,5 +105,31 @@ namespace vl
 		SDL_Point center{ (int)origin.x, (int)origin.y };
 
 		SDL_RenderCopyEx(m_renderer, texture->m_texture, nullptr, &dest, transform.rotation, &center, SDL_FLIP_NONE);
+	}
+
+	void Renderer::Draw(std::shared_ptr<Texture> texture, const Rect& source, const Transform& transform, const Vector2& registration)
+	{
+		Vector2 size = Vector2{ source.w, source.h };
+		size *= transform.scale;
+
+		// setting the registration point (middle is default)
+		Vector2 origin = (size * registration);
+		Vector2 tposition = transform.position - origin;
+
+		SDL_Rect dest;
+		dest.x = (int)tposition.x;
+		dest.y = (int)tposition.y;
+		dest.w = (int)size.x;
+		dest.h = (int)size.y;
+
+		SDL_Rect src;
+		src.x = source.x;
+		src.y = source.y;
+		src.w = source.w;
+		src.h = source.h;
+
+		SDL_Point center{ (int)origin.x, (int)origin.y };
+
+		SDL_RenderCopyEx(m_renderer, texture->m_texture, &src, &dest, transform.rotation, &center, SDL_FLIP_NONE);
 	}
 }
