@@ -28,7 +28,7 @@ namespace vl
     void SpriteAnimComponent::Update()
     {
         // update frame
-        frameTimer += g_time.deltaTime;
+        frameTimer += (float)g_time.deltaTime;
         if (frameTimer >= 1.0f / fps)
         {
             frameTimer = 0;

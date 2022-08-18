@@ -230,6 +230,9 @@
     <Text Include="..\Build\Assets\json.txt" />
     <Text Include="..\Build\Assets\level.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\Build\Assets\Sprites\gothic-hero-idle.png" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
