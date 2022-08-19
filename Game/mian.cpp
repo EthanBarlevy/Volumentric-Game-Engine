@@ -15,6 +15,7 @@ int main()
 	vl::g_inputSystem.Initialize();
 	vl::g_audioSystem.Initialize();
 	vl::g_resourceManager.Initialize();
+	vl::g_physicsSystem.Initialize();
 
 	vl::Engine::Instance().Register();
 
@@ -39,6 +40,7 @@ int main()
 			vl::g_time.Tick();
 			vl::g_inputSystem.Update();
 			vl::g_audioSystem.Update();
+			vl::g_physicsSystem.Update();
 
 			if (vl::g_inputSystem.GetKeyDown(vl::key_escape)) quit = true;
 

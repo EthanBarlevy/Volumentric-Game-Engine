@@ -15,6 +15,8 @@
 
 #include "Resource/resourceManager.h"
 
+#include "Physics/physicsSystem.h"
+
 #include "Framework/scene.h"
 #include "Framework/game.h"
 #include "Framework/singleton.h"
@@ -44,6 +46,7 @@ namespace vl
 	extern Time g_time;
 	extern AudioSystem g_audioSystem;
 	extern ResourceManager g_resourceManager;
+	extern PhysicsSystem g_physicsSystem;
 
 	class Engine : public Singleton<Engine>
 	{
