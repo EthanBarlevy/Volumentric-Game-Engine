@@ -138,6 +138,9 @@
     <ClCompile Include="Physics\physicsSystem.cpp">
       <Filter>Source Files\Physics</Filter>
     </ClCompile>
+    <ClCompile Include="Components\rbPhysicsComponent.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Math\mathUtils.h">
@@ -263,6 +266,9 @@
     <ClInclude Include="Physics\physicsSystem.h">
       <Filter>Source Files\Physics</Filter>
     </ClInclude>
+    <ClInclude Include="Components\rbPhysicsComponent.h">
+      <Filter>Source Files\Components</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\Build\Assets\level.txt">
@@ -271,10 +277,5 @@
     <Text Include="..\Build\Assets\json.txt">
       <Filter>Resource Files</Filter>
     </Text>
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="..\Build\Assets\Sprites\gothic-hero-idle.png">
-      <Filter>Resource Files</Filter>
-    </Image>
   </ItemGroup>
 </Project>

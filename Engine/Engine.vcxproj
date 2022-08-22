@@ -159,6 +159,7 @@
     <ClCompile Include="Components\audioComponent.cpp" />
     <ClCompile Include="Components\physicsComponent.cpp" />
     <ClCompile Include="Components\playerComponent.cpp" />
+    <ClCompile Include="Components\rbPhysicsComponent.cpp" />
     <ClCompile Include="Components\RenderComponents\modelComponent.cpp" />
     <ClCompile Include="Components\RenderComponents\spriteAnimComponent.cpp" />
     <ClCompile Include="Components\RenderComponents\spriteComponent.cpp" />
@@ -191,6 +192,7 @@
     <ClInclude Include="Components\includes.h" />
     <ClInclude Include="Components\physicsComponent.h" />
     <ClInclude Include="Components\playerComponent.h" />
+    <ClInclude Include="Components\rbPhysicsComponent.h" />
     <ClInclude Include="Components\RenderComponents\modelComponent.h" />
     <ClInclude Include="Components\RenderComponents\renderComponent.h" />
     <ClInclude Include="Components\RenderComponents\spriteAnimComponent.h" />
@@ -231,9 +233,6 @@
   <ItemGroup>
     <Text Include="..\Build\Assets\json.txt" />
     <Text Include="..\Build\Assets\level.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="..\Build\Assets\Sprites\gothic-hero-idle.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

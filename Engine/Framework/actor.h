@@ -18,6 +18,7 @@ namespace vl
 		virtual bool Write(const rapidjson::Value& value) const override;
 		virtual bool Read(const rapidjson::Value& value) override;
 
+		void Initialize() override;
 		virtual void Update() override;
 		virtual void Draw(Renderer& renderer);
 

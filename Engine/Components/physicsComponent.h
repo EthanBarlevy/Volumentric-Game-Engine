@@ -13,7 +13,7 @@ namespace vl
 		virtual bool Read(const rapidjson::Value& value) override;
 
 		void Update() override;
-		void ApplyForce(const Vector2& force) { acceleration += force; }
+		virtual void ApplyForce(const Vector2& force) { acceleration += force; }
 
 	public:
 		Vector2 velocity{ Vector2::ZERO };

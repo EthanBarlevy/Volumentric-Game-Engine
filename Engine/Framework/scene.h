@@ -1,5 +1,6 @@
 #pragma once
 #include "actor.h"
+#include "gameObject.h"
 #include <list>
 #include <memory>
 
@@ -10,7 +11,7 @@ namespace vl
 	class Renderer;
 	class Game;
 
-	class Scene : public ISerializable
+	class Scene : public GameObject, public ISerializable
 	{
 	public:
 		Scene() = default;
@@ -20,7 +21,8 @@ namespace vl
 		virtual bool Write(const rapidjson::Value& value) const override;
 		virtual bool Read(const rapidjson::Value& value) override;
 
-		void Update();
+		void Initialize() override;
+		void Update() override;
 		void Draw(Renderer& renderer);
 
 		void Add(std::unique_ptr<Actor> actor);
