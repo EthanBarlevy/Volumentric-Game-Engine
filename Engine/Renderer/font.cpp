@@ -1,4 +1,5 @@
 #include "font.h"
+#include "Core/logger.h"
 #include <SDL_ttf.h>
 
 namespace vl
@@ -23,6 +24,23 @@ namespace vl
 		Load(name, size);
 
 		return false;
+	}
+
+	SDL_Surface* Font::CreateSurface(const std::string& text, const Color& color)
+	{
+		SDL_Color c;
+		c.r = color.r;
+		c.g = color.g;
+		c.b = color.b;
+		c.a = color.a;
+		SDL_Surface* surface = TTF_RenderText_Solid(m_ttfFont, text.c_str(), c);
+
+		if (!surface)
+		{
+			LOG(SDL_GetError());
+		}
+
+		return surface;
 	}
 
 	void Font::Load(const std::string& filename, int fontSize)

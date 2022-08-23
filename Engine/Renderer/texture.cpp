@@ -46,6 +46,22 @@ namespace vl
         return true;
     }
 
+    bool Texture::CreateFromSurface(SDL_Surface* surface, Renderer& renderer)
+    {
+        if (m_texture) SDL_DestroyTexture(m_texture);
+
+        m_texture = SDL_CreateTextureFromSurface(renderer, surface);
+
+        SDL_FreeSurface(surface);
+
+        if (!m_texture)
+        {
+            LOG(SDL_GetError());
+            return false;
+        }
+
+    }
+
     Vector2 Texture::GetSize() const
     {
         SDL_Point point;

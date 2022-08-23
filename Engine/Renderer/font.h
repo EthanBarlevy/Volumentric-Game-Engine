@@ -1,5 +1,6 @@
-#pragma once
+#pragma once 
 #include "Resource/resource.h"
+#include "Math/color.h"
 #include <string>
 
 struct _TTF_Font;
@@ -14,6 +15,7 @@ namespace vl
 		~Font();
 
 		bool Create(std::string name, ...) override ;
+		SDL_Surface* CreateSurface(const std::string& text, const Color& color);
 		void Load(const std::string& filename, int fontSize);
 
 		friend class Text;

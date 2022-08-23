@@ -17,6 +17,7 @@ namespace vl
 
 		bool Create(std::string name, ...) override;
 		bool Create(Renderer& renderer, const std::string& filename);
+		bool CreateFromSurface(SDL_Surface* surface, Renderer& renderer);
 
 		Vector2 GetSize() const;
 
