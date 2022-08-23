@@ -27,7 +27,7 @@ namespace vl
 
 	void RBPhysicsComponent::Initialize()
 	{
-		m_body = g_physicsSystem.CreateBody(PhysicsSystem::ScreenToWorld(m_owner->GetTransform().position), m_owner->GetTransform().rotation, data);
+		m_body = g_physicsSystem.CreateBody(m_owner->GetTransform().position, m_owner->GetTransform().rotation, data);
 		m_body->SetGravityScale(data.gravity_scale);
 		m_body->SetLinearDamping(damping);
 	}

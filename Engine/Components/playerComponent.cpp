@@ -40,11 +40,6 @@ namespace vl
 		// jump
 		if (vl::g_inputSystem.GetKeyState(vl::key_space) == InputSystem::State::Pressed)
 		{
-			//auto component = m_owner->GetComponent<AudioComponent>();
-			//if (component)
-			//{
-			//	component->Play();
-			//}
 			auto component = m_owner->GetComponent<PhysicsComponent>();
 			if (component)
 			{
