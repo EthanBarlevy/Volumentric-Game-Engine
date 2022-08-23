@@ -60,6 +60,8 @@ namespace vl
             return false;
         }
 
+        return true;
+
     }
 
     Vector2 Texture::GetSize() const

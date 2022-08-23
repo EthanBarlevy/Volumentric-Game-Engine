@@ -1,6 +1,6 @@
 #include "audioChannel.h"
 #include "Core/logger.h"
-#include "fmod.h"
+#include "fmod.hpp"
 
 namespace vl
 {
