@@ -32,6 +32,7 @@
 #include "Components/RenderComponents/spriteComponent.h"
 #include "Components/RenderComponents/spriteAnimComponent.h"
 #include "Components/RenderComponents/modelComponent.h"
+#include "Components/RenderComponents/textComponent.h"
 #include "Components/audioComponent.h"
 #include "Components/physicsComponent.h"
 

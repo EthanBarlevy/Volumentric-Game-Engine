@@ -155,6 +155,7 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Audio\audioChannel.cpp" />
     <ClCompile Include="Audio\audioSystem.cpp" />
     <ClCompile Include="Components\audioComponent.cpp" />
     <ClCompile Include="Components\physicsComponent.cpp" />
@@ -163,6 +164,7 @@
     <ClCompile Include="Components\RenderComponents\modelComponent.cpp" />
     <ClCompile Include="Components\RenderComponents\spriteAnimComponent.cpp" />
     <ClCompile Include="Components\RenderComponents\spriteComponent.cpp" />
+    <ClCompile Include="Components\RenderComponents\textComponent.cpp" />
     <ClCompile Include="Core\file.cpp" />
     <ClCompile Include="Core\logger.cpp" />
     <ClCompile Include="Core\memory.cpp" />
@@ -187,6 +189,7 @@
     <ClCompile Include="Serialization\json.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Audio\audioChannel.h" />
     <ClInclude Include="Audio\audioSystem.h" />
     <ClInclude Include="Components\audioComponent.h" />
     <ClInclude Include="Components\includes.h" />
@@ -197,6 +200,7 @@
     <ClInclude Include="Components\RenderComponents\renderComponent.h" />
     <ClInclude Include="Components\RenderComponents\spriteAnimComponent.h" />
     <ClInclude Include="Components\RenderComponents\spriteComponent.h" />
+    <ClInclude Include="Components\RenderComponents\textComponent.h" />
     <ClInclude Include="Core\file.h" />
     <ClInclude Include="Core\logger.h" />
     <ClInclude Include="Core\memory.h" />

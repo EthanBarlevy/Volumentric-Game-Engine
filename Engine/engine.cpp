@@ -18,6 +18,7 @@ namespace vl
 		REGISTER_CLASS(SpriteComponent);
 		REGISTER_CLASS(PlayerComponent);
 		REGISTER_CLASS(SpriteAnimComponent);
+		REGISTER_CLASS(TextComponent);
 
 	}
 }

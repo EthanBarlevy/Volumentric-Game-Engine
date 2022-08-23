@@ -141,6 +141,12 @@
     <ClCompile Include="Components\rbPhysicsComponent.cpp">
       <Filter>Source Files\Components</Filter>
     </ClCompile>
+    <ClCompile Include="Audio\audioChannel.cpp">
+      <Filter>Source Files\Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\RenderComponents\textComponent.cpp">
+      <Filter>Source Files\Components\RenderComponents</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Math\mathUtils.h">
@@ -268,6 +274,12 @@
     </ClInclude>
     <ClInclude Include="Components\rbPhysicsComponent.h">
       <Filter>Source Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Audio\audioChannel.h">
+      <Filter>Source Files\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\RenderComponents\textComponent.h">
+      <Filter>Source Files\Components\RenderComponents</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
