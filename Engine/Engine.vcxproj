@@ -155,6 +155,7 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Audio\audioChannel.cpp" />
     <ClCompile Include="Audio\audioSystem.cpp" />
     <ClCompile Include="Components\audioComponent.cpp" />
     <ClCompile Include="Components\physicsComponent.cpp" />
@@ -187,6 +188,7 @@
     <ClCompile Include="Serialization\json.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Audio\audioChannel.h" />
     <ClInclude Include="Audio\audioSystem.h" />
     <ClInclude Include="Components\audioComponent.h" />
     <ClInclude Include="Components\includes.h" />
