@@ -8,7 +8,7 @@ namespace vl
     {
         if (!m_channel) 
         { 
-            LOG("Error, cannel is null");
+            LOG("Error, channel is null");
             return false; 
         }
 
@@ -41,20 +41,20 @@ namespace vl
 
     float AudioChannel::GetPtich()
     {
-        float pitch;
+        float pitch{ 0 };
         if (IsPlaying())
         {
-            pitch = m_channel->getPitch();
+            m_channel->getPitch(&pitch);
         }
         return pitch;
     }
 
     float AudioChannel::GetVolume()
     {
-        float volume;
+        float volume{ 0 };
         if (IsPlaying())
         {
-            volume = m_channel->getPitch();
+            m_channel->getPitch(&volume);
         }
         return volume;
     }
