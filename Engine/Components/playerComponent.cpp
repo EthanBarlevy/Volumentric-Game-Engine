@@ -19,45 +19,42 @@ namespace vl
 
 	void PlayerComponent::Update()
 	{
-		// this all kinda should have physics so just imagine that there is physics until its added
+		// movement
 		Vector2 direction = Vector2::ZERO;
 		if (vl::g_inputSystem.GetKeyDown(vl::key_left))
 		{
-			m_owner->GetTransform().rotation -= 180 * (float)g_time.deltaTime;
+			direction = Vector2::LEFT;
 		}
 
 		if (vl::g_inputSystem.GetKeyDown(vl::key_right))
 		{
-			m_owner->GetTransform().rotation += 180 * (float)g_time.deltaTime;
-		}
-
-		float thrust = 0;
-		if (vl::g_inputSystem.GetKeyDown(vl::key_up))
-		{
-			thrust = speed;
+			direction = Vector2::RIGHT;
 		}
 
 		auto component = m_owner->GetComponent<PhysicsComponent>();
 		if (component)
 		{
-			// thrust
-			Vector2 force = Vector2::Rotate(Vector2::RIGHT, math::DegToRad(m_owner->GetTransform().rotation)) * thrust;
-			component->ApplyForce(force);
-
-			//// gravity
-			//force = (Vector2{ 250, 250 } - m_owner->GetTransform().position).Normalized() * 1000.0f;
-			//component->ApplyForce(force);
+			component->ApplyForce(direction * speed);
 		}
 
-		m_owner->GetTransform().position += direction * 300 * (float)g_time.deltaTime;
-
+		// jump
 		if (vl::g_inputSystem.GetKeyState(vl::key_space) == InputSystem::State::Pressed)
 		{
-			auto component = m_owner->GetComponent<AudioComponent>();
+			//auto component = m_owner->GetComponent<AudioComponent>();
+			//if (component)
+			//{
+			//	component->Play();
+			//}
+			auto component = m_owner->GetComponent<PhysicsComponent>();
 			if (component)
 			{
-				component->Play();
+				component->ApplyForce(Vector2::UP * 300);
 			}
+		}
+
+		if (vl::g_inputSystem.GetKeyDown(vl::key_up))
+		{
+			// currently unused
 		}
 	}
 }

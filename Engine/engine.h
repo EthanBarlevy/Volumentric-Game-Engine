@@ -35,6 +35,8 @@
 #include "Components/RenderComponents/textComponent.h"
 #include "Components/audioComponent.h"
 #include "Components/physicsComponent.h"
+#include "Components/rbPhysicsComponent.h"
+#include "Components/CollisionComponent.h"
 
 #include <memory>
 #include <vector>

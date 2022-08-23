@@ -158,6 +158,7 @@
     <ClCompile Include="Audio\audioChannel.cpp" />
     <ClCompile Include="Audio\audioSystem.cpp" />
     <ClCompile Include="Components\audioComponent.cpp" />
+    <ClCompile Include="Components\collisionComponent.cpp" />
     <ClCompile Include="Components\physicsComponent.cpp" />
     <ClCompile Include="Components\playerComponent.cpp" />
     <ClCompile Include="Components\rbPhysicsComponent.cpp" />
@@ -192,6 +193,7 @@
     <ClInclude Include="Audio\audioChannel.h" />
     <ClInclude Include="Audio\audioSystem.h" />
     <ClInclude Include="Components\audioComponent.h" />
+    <ClInclude Include="Components\collisionComponent.h" />
     <ClInclude Include="Components\includes.h" />
     <ClInclude Include="Components\physicsComponent.h" />
     <ClInclude Include="Components\playerComponent.h" />
@@ -223,6 +225,7 @@
     <ClInclude Include="Math\transform.h" />
     <ClInclude Include="Math\vector2.h" />
     <ClInclude Include="Math\vector3.h" />
+    <ClInclude Include="Physics\collision.h" />
     <ClInclude Include="Physics\physicsSystem.h" />
     <ClInclude Include="Renderer\font.h" />
     <ClInclude Include="Renderer\model.h" />
@@ -233,10 +236,6 @@
     <ClInclude Include="Resource\resourceManager.h" />
     <ClInclude Include="Serialization\json.h" />
     <ClInclude Include="Serialization\serializable.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="..\Build\Assets\json.txt" />
-    <Text Include="..\Build\Assets\level.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -50,7 +50,7 @@ namespace vl
     {
         if (m_texture) SDL_DestroyTexture(m_texture);
 
-        m_texture = SDL_CreateTextureFromSurface(renderer, surface);
+        m_texture = SDL_CreateTextureFromSurface(renderer.m_renderer, surface);
 
         SDL_FreeSurface(surface);
 

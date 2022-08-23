@@ -12,8 +12,8 @@ namespace vl
 	class TextComponent : public RenderComponent
 	{
 	public:
-		virtual void Write(const rapidjson::Value& value) const;
-		virtual void Read(const rapidjson::Value& value);
+		virtual bool Write(const rapidjson::Value& value) const;
+		virtual bool Read(const rapidjson::Value& value);
 
 		virtual void Update() override;
 		virtual void Draw(Renderer& renderer) override;

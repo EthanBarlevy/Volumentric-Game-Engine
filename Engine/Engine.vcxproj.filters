@@ -147,6 +147,9 @@
     <ClCompile Include="Components\RenderComponents\textComponent.cpp">
       <Filter>Source Files\Components\RenderComponents</Filter>
     </ClCompile>
+    <ClCompile Include="Components\collisionComponent.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Math\mathUtils.h">
@@ -281,13 +284,11 @@
     <ClInclude Include="Components\RenderComponents\textComponent.h">
       <Filter>Source Files\Components\RenderComponents</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="..\Build\Assets\level.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
-    <Text Include="..\Build\Assets\json.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
+    <ClInclude Include="Physics\collision.h">
+      <Filter>Source Files\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\collisionComponent.h">
+      <Filter>Source Files\Components</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

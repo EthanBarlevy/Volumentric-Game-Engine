@@ -4,6 +4,8 @@
 #include <string>
 
 struct _TTF_Font;
+struct SDL_Surface;
+
 namespace vl
 {
 

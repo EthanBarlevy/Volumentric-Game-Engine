@@ -59,4 +59,5 @@ int main()
 	vl::g_renderer.Shutodwn();
 	vl::g_audioSystem.Shutdown();
 	vl::g_resourceManager.Shutodwn();
+	vl::g_physicsSystem.Shutdown();
 }
