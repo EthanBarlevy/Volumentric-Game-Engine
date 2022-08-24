@@ -1,6 +1,7 @@
 #include "playerComponent.h"
 #include "audioComponent.h"
 #include "physicsComponent.h"
+#include "collisionComponent.h"
 #include "Math/mathUtils.h"
 #include "Framework/actor.h"
 
@@ -15,6 +16,17 @@ namespace vl
 		READ_DATA(value, speed);
 
 		return true;
+	}
+
+	void PlayerComponent::Initialize()
+	{
+		auto component = m_owner->GetComponent<CollisionComponent>();
+
+		if (component)
+		{
+			component->SetCollisionEnter(std::bind(&PlayerComponent::OnCollisionEnter, this, std::placeholders::_1));
+			component->SetCollisionExit(std::bind(&PlayerComponent::OnCollisionExit, this, std::placeholders::_1));
+		}
 	}
 
 	void PlayerComponent::Update()
@@ -51,6 +63,16 @@ namespace vl
 		{
 			// currently unused
 		}
+	}
+
+	void PlayerComponent::OnCollisionEnter(Actor* other)
+	{
+		std::cout << "player enter\n";
+	}
+
+	void PlayerComponent::OnCollisionExit(Actor* other)
+	{
+		std::cout << "player exit\n";
 	}
 }
 

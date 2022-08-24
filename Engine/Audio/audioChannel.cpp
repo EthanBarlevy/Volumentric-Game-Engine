@@ -20,42 +20,30 @@ namespace vl
 
     void AudioChannel::Stop()
     {
-        if (IsPlaying()) m_channel->stop();
+        if (IsPlaying()) { m_channel->stop(); }
     }
 
     void AudioChannel::SetPitch(float pitch)
     {
-        if (IsPlaying())
-        {
-            m_channel->setPitch(pitch);
-        }
+        if (IsPlaying()) { m_channel->setPitch(pitch); }
     }
 
     void AudioChannel::SetVolume(float volume)
     {
-        if (IsPlaying())
-        {
-            m_channel->setVolume(volume);
-        }
+        if (IsPlaying()) { m_channel->setVolume(volume); }
     }
 
     float AudioChannel::GetPtich()
     {
         float pitch{ 0 };
-        if (IsPlaying())
-        {
-            m_channel->getPitch(&pitch);
-        }
+        if (IsPlaying()) { m_channel->getPitch(&pitch); }
         return pitch;
     }
 
     float AudioChannel::GetVolume()
     {
         float volume{ 0 };
-        if (IsPlaying())
-        {
-            m_channel->getPitch(&volume);
-        }
+        if (IsPlaying()) { m_channel->getPitch(&volume); }
         return volume;
     }
 }

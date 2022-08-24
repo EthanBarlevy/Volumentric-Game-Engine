@@ -26,6 +26,7 @@ namespace vl
 		void Draw(Renderer& renderer);
 
 		void Add(std::unique_ptr<Actor> actor);
+		void RemoveAll();
 
 		template<typename T>
 		T* GetActor();

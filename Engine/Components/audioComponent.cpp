@@ -39,8 +39,8 @@ namespace vl
 
 	void AudioComponent::Play()
 	{
-		Stop();
-		g_audioSystem.PlayAudio(sound_name, loop);
+		m_channel.Stop();
+		m_channel = g_audioSystem.PlayAudio(sound_name, loop);
 	}
 
 	void AudioComponent::Stop()

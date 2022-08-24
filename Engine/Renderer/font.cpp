@@ -11,7 +11,11 @@ namespace vl
 
 	Font::~Font()
 	{
-		if (m_ttfFont) TTF_CloseFont(m_ttfFont);
+		if (m_ttfFont) 
+		{ 
+			TTF_CloseFont(m_ttfFont); 
+			m_ttfFont = nullptr;
+		}
 	}
 
 	bool Font::Create(std::string name, ...)
@@ -28,13 +32,8 @@ namespace vl
 
 	SDL_Surface* Font::CreateSurface(const std::string& text, const Color& color)
 	{
-		SDL_Color c;
-		c.r = color.r;
-		c.g = color.g;
-		c.b = color.b;
-		c.a = color.a;
+		SDL_Color c = *((SDL_Color*)(&color));
 		SDL_Surface* surface = TTF_RenderText_Solid(m_ttfFont, text.c_str(), c);
-
 		if (!surface)
 		{
 			LOG(SDL_GetError());

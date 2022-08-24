@@ -1,4 +1,5 @@
 #pragma once
+#include "contactListener.h"
 #include "Math/vector2.h"
 #include "box2d/box2d.h"
 #include <memory>
@@ -10,6 +11,8 @@
 
 namespace vl
 {
+	class ContactListener;
+
 	class PhysicsSystem
 	{
 	public:
@@ -49,5 +52,6 @@ namespace vl
 		static const float pixelsPerUnit;
 
 		std::unique_ptr<b2World> m_world;
+		std::unique_ptr<ContactListener> m_cListener;
 	};
 }

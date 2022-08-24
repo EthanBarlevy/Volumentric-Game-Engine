@@ -72,9 +72,10 @@
             {
                "type":"CollisionComponent",
                "data.size":[
-                  24,
-                  24
-               ]
+                  32,
+                  32
+               ],
+               "data.restitution":0
             },
             {
                "type":"SpriteAnimComponent",
@@ -121,6 +122,12 @@
                ]
             },
             {
+               "type":"AudioComponent",
+               "sound_name":"Sounds/idk.wav",
+               "loop":"false",
+               "play_on_start":true
+            },
+            {
                "type":"SpriteAnimComponent",
                "texture_name":"Sprites/gothic-hero-idle.png",
                "fps":5,
@@ -142,6 +149,31 @@
                "play_on_start":true 
             } 
          ] 
-      }
+      },
+      {
+         "type":"Actor", 
+         "name":"Text", 
+         "transform":{ 
+            "position":[ 
+               50, 
+               100 
+            ], 
+            "scale":[ 
+               1, 
+               1 
+            ], 
+            "rotation":0 
+         }, 
+         "components":[ 
+            { 
+               "type":"TextComponent", 
+               "text":"Hello World!", 
+               "font_name":"fonts/arcade.ttf", 
+               "font_size":75, 
+               "registration": [0.0, 0.5], 
+               "color":[255, 255, 0, 255] 
+            } 
+         ] 
+      } 
    ]
 }

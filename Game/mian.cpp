@@ -54,6 +54,7 @@ int main()
 			vl::g_renderer.EndFrame();
 		}
 	}
+	scene.RemoveAll();
 
 	vl::g_inputSystem.Shutdown();
 	vl::g_renderer.Shutodwn();

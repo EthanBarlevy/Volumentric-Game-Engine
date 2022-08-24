@@ -13,7 +13,7 @@ namespace vl
 
 	void Text::Create(Renderer& renderer, const std::string& text, const Color& color)
 	{
-		SDL_Color c{ color.r, color.g, color.b, color.a };
+		SDL_Color c = *((SDL_Color*)(&color));
 		SDL_Surface* surface = TTF_RenderText_Solid(m_font->m_ttfFont, text.c_str(), c);
 		
 		m_texture = SDL_CreateTextureFromSurface(renderer.m_renderer, surface);

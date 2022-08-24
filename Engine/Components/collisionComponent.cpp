@@ -2,6 +2,7 @@
 #include "Framework/actor.h"
 #include "rbPhysicsComponent.h"
 #include "includes.h"
+#include <iostream>
 
 namespace vl
 {
@@ -37,11 +38,11 @@ namespace vl
 
     void CollisionComponent::OnCollisionEnter(Actor* other)
     {
-        //
+        if (m_enterFunction) { m_enterFunction(other); }
     }
 
     void CollisionComponent::OnCollisionExit(Actor* other)
     {
-        //
+        if (m_enterFunction) { m_exitFunction(other); }
     }
 }

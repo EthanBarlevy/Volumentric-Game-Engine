@@ -1,6 +1,5 @@
 #pragma once 
 #include "Resource/resource.h"
-#include "Math/color.h"
 #include <string>
 
 struct _TTF_Font;
@@ -8,6 +7,7 @@ struct SDL_Surface;
 
 namespace vl
 {
+	struct Color;
 
 	class Font : public Resource
 	{
@@ -22,6 +22,6 @@ namespace vl
 
 		friend class Text;
 	private:
-		_TTF_Font* m_ttfFont = nullptr;
+		 _TTF_Font* m_ttfFont = nullptr;
 	};
 }
