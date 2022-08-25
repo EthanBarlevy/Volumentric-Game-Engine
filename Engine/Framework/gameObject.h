@@ -3,6 +3,7 @@
 #include "Serialization/serializable.h"
 
 #define REGISTER_CLASS(class) Factory::Instance().Register<class>(#class)
+#define CLASS_CLONE(class) std::unique_ptr<GameObject> Clone() override { return std::make_unique<class>(*this); }
 
 namespace vl
 {
@@ -13,5 +14,6 @@ namespace vl
 
 		virtual void Initialize() = 0;
 		virtual void Update() = 0;
+		virtual std::unique_ptr<GameObject> Clone() = 0;
 	};
 }

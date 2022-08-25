@@ -9,6 +9,9 @@ namespace vl
 	class SpriteAnimComponent : public RenderComponent
 	{
 	public:
+
+		CLASS_CLONE(SpriteAnimComponent);
+
 		virtual bool Write(const rapidjson::Value& value) const override;
 		virtual bool Read(const rapidjson::Value& value) override;
 

@@ -8,6 +8,8 @@ namespace vl
 	{
 	public:
 		PhysicsComponent() = default;
+
+		CLASS_CLONE(PhysicsComponent);
 		
 		virtual bool Write(const rapidjson::Value& value) const override;
 		virtual bool Read(const rapidjson::Value& value) override;

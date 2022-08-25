@@ -12,6 +12,9 @@ namespace vl
 	class TextComponent : public RenderComponent
 	{
 	public:
+
+		CLASS_CLONE(TextComponent);
+
 		virtual bool Write(const rapidjson::Value& value) const;
 		virtual bool Read(const rapidjson::Value& value);
 

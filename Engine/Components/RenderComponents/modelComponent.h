@@ -8,6 +8,9 @@ namespace vl
 	class ModelComponent : public RenderComponent
 	{
 	public:
+
+		CLASS_CLONE(ModelComponent);
+
 		virtual bool Write(const rapidjson::Value& value) const override;
 		virtual bool Read(const rapidjson::Value& value) override;
 		

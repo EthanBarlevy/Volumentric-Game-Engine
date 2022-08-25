@@ -53,6 +53,8 @@
       {
          "type":"Actor",
          "name":"Coin",
+         "tag":"Pickup",
+         "prefab":true,
          "transform":{
             "position":[
                400,
@@ -67,7 +69,8 @@
          "components":[
             {
                "type":"RBPhysicsComponent",
-               "data.gravity_scale":1
+               "data.gravity_scale":1,
+               "data.constrain_angle":false
             },
             {
                "type":"CollisionComponent",

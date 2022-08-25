@@ -32,6 +32,15 @@ int main()
 	scene.Read(document);
 	scene.Initialize();
 
+	for (int i = 0; i < 30; i++)
+	{
+		auto actor = vl::Factory::Instance().Create<vl::Actor>("Coin");
+		actor->GetTransform().position = { vl::randomf(0, 500), 100.0f };
+		actor->Initialize();
+
+		scene.Add(std::move(actor));
+	}
+
 	{
 		bool quit = false;
 		while (!quit)

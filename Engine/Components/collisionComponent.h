@@ -10,6 +10,7 @@ namespace vl
 	{
 	public:
 		using funcPtr = std::function<void(Actor*)>;
+		CLASS_CLONE(CollisionComponent);
 
 	public:
 		virtual bool Write(const rapidjson::Value& value) const override;

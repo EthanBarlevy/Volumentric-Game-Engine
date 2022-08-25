@@ -9,6 +9,8 @@ namespace vl
 	public:
 		PlayerComponent() = default;
 
+		CLASS_CLONE(PlayerComponent);
+
 		virtual bool Write(const rapidjson::Value& value) const override;
 		virtual bool Read(const rapidjson::Value& value) override;
 		

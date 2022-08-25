@@ -16,7 +16,10 @@ namespace vl
 	public:
 		Scene() = default;
 		Scene(Game* game) : m_game{ game } {};
+		Scene(const Scene& other) {}
 		~Scene() = default;
+
+		CLASS_CLONE(Scene);
 
 		virtual bool Write(const rapidjson::Value& value) const override;
 		virtual bool Read(const rapidjson::Value& value) override;

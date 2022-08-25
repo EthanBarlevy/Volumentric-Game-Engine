@@ -10,6 +10,8 @@ namespace vl
 		AudioComponent() = default;
 		~AudioComponent();
 
+		CLASS_CLONE(AudioComponent);
+
 		virtual bool Write(const rapidjson::Value& value) const override;
 		virtual bool Read(const rapidjson::Value& value) override;
 

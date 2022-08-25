@@ -13,15 +13,18 @@ namespace vl
 	{
 	public:
 		Actor() = default;
+		Actor(const Actor& other);
 		Actor(const Transform& transform) : m_transform{ transform } {}
 		
+		CLASS_CLONE(Actor);
+
 		virtual bool Write(const rapidjson::Value& value) const override;
 		virtual bool Read(const rapidjson::Value& value) override;
 
 		void Initialize() override;
 		virtual void Update() override;
-		virtual void Draw(Renderer& renderer);
 
+		virtual void Draw(Renderer& renderer);
 		void AddChild(std::unique_ptr<Actor> child);
 
 		void AddComponent(std::unique_ptr<Component> component);
