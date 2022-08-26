@@ -79,7 +79,7 @@
             {
                "type":"CollisionComponent",
                "data.size":[
-                  48,
+                  38,
                   48
                ]
             },
