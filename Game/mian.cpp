@@ -1,4 +1,5 @@
 #include "engine.h"
+#include "myGame.h"
 #include <iostream>
 #include <algorithm>
 
@@ -23,23 +24,8 @@ int main()
 	vl::g_renderer.CreateWindow("Gaming", 500, 500);
 	vl::g_renderer.setClearColor(vl::Color{ 0, 0, 0, 255 });
 
-	// create scene
-	vl::Scene scene;
-
-	// load from json file to scene
-	rapidjson::Document document;
-	bool sucess = vl::json::Load("level.txt", document);
-	scene.Read(document);
-	scene.Initialize();
-
-	for (int i = 0; i < 30; i++)
-	{
-		auto actor = vl::Factory::Instance().Create<vl::Actor>("Coin");
-		actor->GetTransform().position = { vl::randomf(0, 500), 100.0f };
-		actor->Initialize();
-
-		scene.Add(std::move(actor));
-	}
+	std::unique_ptr<myGame> game = std::make_unique<myGame>();
+	game->Initialize();
 
 	{
 		bool quit = false;
@@ -53,18 +39,21 @@ int main()
 
 			if (vl::g_inputSystem.GetKeyDown(vl::key_escape)) quit = true;
 
-			scene.Update();
+			game->Update();
 
 			//render
 			vl::g_renderer.BeginFrame();
-
-			scene.Draw(vl::g_renderer);
+			
+			game->Draw(vl::g_renderer);
 
 			vl::g_renderer.EndFrame();
 		}
 	}
-	scene.RemoveAll();
+	game->Shutdown();
+	game.reset(); // essentially the same as calling delete on a normal pointer
 
+	vl::Factory::Instance().Shutdown();
+	// technically these should also be singletons but i am to lazy to fix it
 	vl::g_inputSystem.Shutdown();
 	vl::g_renderer.Shutodwn();
 	vl::g_audioSystem.Shutdown();

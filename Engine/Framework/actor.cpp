@@ -9,6 +9,7 @@ namespace vl
 	{
 		name = other.name;
 		tag = other.tag;
+		m_transform = other.m_transform;
 		m_scene = other.m_scene;
 
 		for (auto& component : other.m_components)
@@ -27,6 +28,7 @@ namespace vl
 	{
 		READ_DATA(value, tag);
 		READ_DATA(value, name);
+		READ_DATA(value, active);
 
 		if (value.HasMember("transform")) { m_transform.Read(value["transform"]); }
 
@@ -65,6 +67,7 @@ namespace vl
 
 	void Actor::Update()
 	{
+		if (!active) { return; }
 		for (auto& component : m_components)
 		{
 			component->Update();
@@ -80,6 +83,7 @@ namespace vl
 
 	void Actor::Draw(Renderer& renderer)
 	{
+		if (!active) { return; }
 		for (auto& component : m_components)
 		{
 			auto rcom = dynamic_cast<RenderComponent*>(component.get());

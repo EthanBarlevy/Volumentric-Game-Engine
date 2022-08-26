@@ -27,7 +27,8 @@ namespace vl::json
 
     bool Get(const rapidjson::Value& value, const std::string& name, int& data)
     {
-        if (!value.HasMember(name.c_str()) || !value[name.c_str()].IsInt())
+        if (!value.HasMember(name.c_str())) { return false; }
+        if (!value[name.c_str()].IsInt())
         {
             LOG("error reading json data %s", name.c_str());
             return false;
@@ -39,7 +40,8 @@ namespace vl::json
 
     bool Get(const rapidjson::Value& value, const std::string& name, float& data)
     {
-        if (!value.HasMember(name.c_str()) || !value[name.c_str()].IsNumber())
+        if (!value.HasMember(name.c_str())) { return false; }
+        if (!value[name.c_str()].IsNumber())
         {
             LOG("error reading json data %s", name.c_str());
             return false;
@@ -51,7 +53,8 @@ namespace vl::json
 
     bool Get(const rapidjson::Value& value, const std::string& name, bool& data)
     {
-        if (!value.HasMember(name.c_str()) || !value[name.c_str()].IsBool())
+        if (!value.HasMember(name.c_str())) { return false; }
+        if (!value[name.c_str()].IsBool())
         {
             LOG("error reading json data %s", name.c_str());
             return false;
@@ -63,7 +66,8 @@ namespace vl::json
 
     bool Get(const rapidjson::Value& value, const std::string& name, std::string& data)
     {
-        if (!value.HasMember(name.c_str()) || !value[name.c_str()].IsString())
+        if (!value.HasMember(name.c_str())) { return false; }
+        if (!value[name.c_str()].IsString())
         {
             LOG("error reading json data %s", name.c_str());
             return false;
@@ -75,7 +79,8 @@ namespace vl::json
 
     bool Get(const rapidjson::Value& value, const std::string& name, Vector2& data)
     {
-        if (!value.HasMember(name.c_str()) || !value[name.c_str()].IsArray() || value[name.c_str()].Size() != 2)
+        if (!value.HasMember(name.c_str())) { return false; }
+        if (!value[name.c_str()].IsArray() || value[name.c_str()].Size() != 2)
         {
             LOG("error reading json data %s", name.c_str());
             return false;
@@ -97,7 +102,8 @@ namespace vl::json
 
     bool Get(const rapidjson::Value& value, const std::string& name, Color& data)
     {
-        if (!value.HasMember(name.c_str()) || !value[name.c_str()].IsArray() || value[name.c_str()].Size() != 4)
+        if (!value.HasMember(name.c_str())) { return false; }
+        if (!value[name.c_str()].IsArray() || value[name.c_str()].Size() != 4)
         {
             LOG("error reading json data %s", name.c_str());
             return false;
@@ -119,7 +125,8 @@ namespace vl::json
 
     bool Get(const rapidjson::Value& value, const std::string& name, Rect& data)
     {
-        if (!value.HasMember(name.c_str()) || !value[name.c_str()].IsArray() || value[name.c_str()].Size() != 4)
+        if (!value.HasMember(name.c_str())) { return false; }
+        if (!value[name.c_str()].IsArray() || value[name.c_str()].Size() != 4)
         {
             LOG("error reading json data %s", name.c_str());
             return false;
@@ -135,4 +142,51 @@ namespace vl::json
         return true;
     }
 
+    bool Get(const rapidjson::Value& value, const std::string& name, std::vector<std::string>& data)
+    {
+        if (!value.HasMember(name.c_str())) { return false; }
+
+        if (!value[name.c_str()].IsArray())
+        {
+            LOG("error reading json data %s", name.c_str());
+            return false;
+        }
+
+        auto& array = value[name.c_str()];
+
+        for (rapidjson::SizeType i = 0; i < array.Size(); i++)
+        {
+            if (!array[1].IsString())
+            {
+                LOG("error reading json data (not a string) %s", name.c_str());
+                return false;
+            }
+            data.push_back(array[i].GetString());
+        }
+        return true;
+    }
+
+    bool Get(const rapidjson::Value& value, const std::string& name, std::vector<int>& data)
+    {
+        if (!value.HasMember(name.c_str())) { return false; }
+
+        if (!value[name.c_str()].IsArray())
+        {
+            LOG("error reading json data %s", name.c_str());
+            return false;
+        }
+
+        auto& array = value[name.c_str()];
+
+        for (rapidjson::SizeType i = 0; i < array.Size(); i++)
+        {
+            if (!array[1].IsInt())
+            {
+                LOG("error reading json data (not an int) %s", name.c_str());
+                return false;
+            }
+            data.push_back(array[i].GetInt());
+        }
+        return true;
+    }
 }

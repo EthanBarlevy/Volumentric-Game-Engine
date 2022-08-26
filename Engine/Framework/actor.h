@@ -43,7 +43,13 @@ namespace vl
 		// i know that this is bad but i dont care i like it
 		Transform& GetTransform() { return m_transform; }
 
+		void SetActive(bool active = true) { this->active = active; }
+		bool IsActive() { return active; }
+
+		Scene* GetScene() { return m_scene; }
+
 		friend class Scene;
+		friend class Component;
 
 	protected:
 		Scene* m_scene{ nullptr };
@@ -55,6 +61,7 @@ namespace vl
 		std::string tag;
 		std::string name;
 
+		bool active{ true };
 		bool m_destroy{ false };
 	};
 

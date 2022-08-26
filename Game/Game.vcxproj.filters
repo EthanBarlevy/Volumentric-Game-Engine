@@ -13,9 +13,23 @@
     <ClCompile Include="mian.cpp">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="myGame.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="..\Build\Assets\level.txt">
+    <ClInclude Include="myGame.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\Build\Assets\Scenes\level.txt">
+      <Filter>Resources</Filter>
+    </Text>
+    <Text Include="..\Build\Assets\Scenes\prefabs.txt">
+      <Filter>Resources</Filter>
+    </Text>
+    <Text Include="..\Build\Assets\Scenes\tilemap.txt">
       <Filter>Resources</Filter>
     </Text>
   </ItemGroup>

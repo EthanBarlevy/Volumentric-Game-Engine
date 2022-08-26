@@ -1,5 +1,6 @@
 #pragma once
 #include "singleton.h"
+#include "Core/logger.h"
 #include <memory>
 #include <string>
 #include <map>
@@ -11,6 +12,7 @@ namespace vl
 	class CreatorBase
 	{
 	public:
+		virtual ~CreatorBase() = default;
 		virtual std::unique_ptr<GameObject> Create() = 0;
 	};
 
@@ -28,6 +30,7 @@ namespace vl
 	class Prefab : public CreatorBase
 	{
 	public:
+		~Prefab() = default;
 		Prefab(std::unique_ptr<T> instance) : m_instance{ std::move(instance) } {}
 		std::unique_ptr<GameObject> Create() override
 		{
@@ -41,6 +44,8 @@ namespace vl
 	class Factory : public Singleton<Factory>
 	{
 	public:
+		void Shutdown() { m_registry.clear(); }
+
 		template <typename T>
 		void Register(const std::string& key);
 
@@ -74,6 +79,8 @@ namespace vl
 		{
 			return std::unique_ptr<T>(dynamic_cast<T*>(iter->second->Create().release()));
 		}
+
+		LOG("Error, %s is not in the registry", key.c_str());
 
 		return std::unique_ptr<T>();
 	}

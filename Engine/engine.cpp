@@ -21,6 +21,7 @@ namespace vl
 		REGISTER_CLASS(PlayerComponent);
 		REGISTER_CLASS(SpriteAnimComponent);
 		REGISTER_CLASS(TextComponent);
+		REGISTER_CLASS(TilemapComponent);
 
 	}
 }

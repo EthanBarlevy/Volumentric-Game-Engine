@@ -12,7 +12,6 @@ namespace vl
 		Game() = default;
 		virtual ~Game() = default;
 
-		// required implementaion with this
 		virtual void Initialize() = 0;
 		virtual void Shutdown() = 0;
 

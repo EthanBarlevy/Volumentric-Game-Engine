@@ -166,6 +166,7 @@
     <ClCompile Include="Components\RenderComponents\spriteAnimComponent.cpp" />
     <ClCompile Include="Components\RenderComponents\spriteComponent.cpp" />
     <ClCompile Include="Components\RenderComponents\textComponent.cpp" />
+    <ClCompile Include="Components\tilemapComponent.cpp" />
     <ClCompile Include="Core\file.cpp" />
     <ClCompile Include="Core\logger.cpp" />
     <ClCompile Include="Core\memory.cpp" />
@@ -204,6 +205,7 @@
     <ClInclude Include="Components\RenderComponents\spriteAnimComponent.h" />
     <ClInclude Include="Components\RenderComponents\spriteComponent.h" />
     <ClInclude Include="Components\RenderComponents\textComponent.h" />
+    <ClInclude Include="Components\tilemapComponent.h" />
     <ClInclude Include="Core\file.h" />
     <ClInclude Include="Core\logger.h" />
     <ClInclude Include="Core\memory.h" />
