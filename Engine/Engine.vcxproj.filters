@@ -49,6 +49,12 @@
     <Filter Include="Source Files\Physics">
       <UniqueIdentifier>{b5e86ba4-0e14-487a-9bf8-597c365d1c42}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Framework\Engine">
+      <UniqueIdentifier>{a97fe19f-1e0a-4051-980a-43c251ed4552}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Framework\Game">
+      <UniqueIdentifier>{ce6ad4b9-71c7-41ee-8a7c-ab4929dfc659}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Math\mathUtils.cpp">
@@ -69,17 +75,11 @@
     <ClCompile Include="Core\file.cpp">
       <Filter>Source Files\Core</Filter>
     </ClCompile>
-    <ClCompile Include="Framework\actor.cpp">
-      <Filter>Source Files\Framework</Filter>
-    </ClCompile>
     <ClCompile Include="engine.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Core\time.cpp">
       <Filter>Source Files\Core</Filter>
-    </ClCompile>
-    <ClCompile Include="Framework\scene.cpp">
-      <Filter>Source Files\Framework</Filter>
     </ClCompile>
     <ClCompile Include="Audio\audioSystem.cpp">
       <Filter>Source Files\Audio</Filter>
@@ -156,6 +156,15 @@
     <ClCompile Include="Components\tilemapComponent.cpp">
       <Filter>Source Files\Components</Filter>
     </ClCompile>
+    <ClCompile Include="Framework\actor.cpp">
+      <Filter>Source Files\Framework\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\scene.cpp">
+      <Filter>Source Files\Framework\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\eventManager.cpp">
+      <Filter>Source Files\Framework\Game</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Math\mathUtils.h">
@@ -185,20 +194,11 @@
     <ClInclude Include="Core\file.h">
       <Filter>Source Files\Core</Filter>
     </ClInclude>
-    <ClInclude Include="Framework\gameObject.h">
-      <Filter>Source Files\Framework</Filter>
-    </ClInclude>
     <ClInclude Include="Math\transform.h">
       <Filter>Source Files\Math</Filter>
     </ClInclude>
-    <ClInclude Include="Framework\actor.h">
-      <Filter>Source Files\Framework</Filter>
-    </ClInclude>
     <ClInclude Include="Core\time.h">
       <Filter>Source Files\Core</Filter>
-    </ClInclude>
-    <ClInclude Include="Framework\scene.h">
-      <Filter>Source Files\Framework</Filter>
     </ClInclude>
     <ClInclude Include="Audio\audioSystem.h">
       <Filter>Source Files\Audio</Filter>
@@ -209,17 +209,11 @@
     <ClInclude Include="Renderer\text.h">
       <Filter>Source Files\Renderer</Filter>
     </ClInclude>
-    <ClInclude Include="Framework\game.h">
-      <Filter>Source Files\Framework</Filter>
-    </ClInclude>
     <ClInclude Include="Renderer\texture.h">
       <Filter>Source Files\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="Core\logger.h">
       <Filter>Source Files\Core</Filter>
-    </ClInclude>
-    <ClInclude Include="Framework\component.h">
-      <Filter>Source Files\Framework</Filter>
     </ClInclude>
     <ClInclude Include="Components\playerComponent.h">
       <Filter>Source Files\Components</Filter>
@@ -260,12 +254,6 @@
     <ClInclude Include="Resource\resourceManager.h">
       <Filter>Source Files\Resource</Filter>
     </ClInclude>
-    <ClInclude Include="Framework\singleton.h">
-      <Filter>Source Files\Framework</Filter>
-    </ClInclude>
-    <ClInclude Include="Framework\factory.h">
-      <Filter>Source Files\Framework</Filter>
-    </ClInclude>
     <ClInclude Include="Serialization\json.h">
       <Filter>Source Files\Serialization</Filter>
     </ClInclude>
@@ -301,6 +289,33 @@
     </ClInclude>
     <ClInclude Include="Components\tilemapComponent.h">
       <Filter>Source Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\actor.h">
+      <Filter>Source Files\Framework\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\component.h">
+      <Filter>Source Files\Framework\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\factory.h">
+      <Filter>Source Files\Framework\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\game.h">
+      <Filter>Source Files\Framework\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\gameObject.h">
+      <Filter>Source Files\Framework\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\scene.h">
+      <Filter>Source Files\Framework\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\singleton.h">
+      <Filter>Source Files\Framework\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\event.h">
+      <Filter>Source Files\Framework\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\eventManager.h">
+      <Filter>Source Files\Framework\Game</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

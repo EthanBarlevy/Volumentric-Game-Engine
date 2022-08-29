@@ -46,6 +46,9 @@ namespace vl
 		void SetActive(bool active = true) { this->active = active; }
 		bool IsActive() { return active; }
 
+		void Destroy() { m_destroy = true; }
+		bool IsDestroyed() { return m_destroy; }
+
 		Scene* GetScene() { return m_scene; }
 
 		friend class Scene;

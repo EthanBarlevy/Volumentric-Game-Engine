@@ -47,6 +47,7 @@ namespace vl
 
 	void Scene::RemoveAll()
 	{
+		for (auto& actor : m_actors) { actor->Destroy(); }
 		m_actors.clear();
 	}
 

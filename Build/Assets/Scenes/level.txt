@@ -115,7 +115,7 @@
       {
          "type":"Actor", 
          "name":"Text", 
-         "active":false,
+         "active":true,
          "transform":{ 
             "position":[ 
                50, 

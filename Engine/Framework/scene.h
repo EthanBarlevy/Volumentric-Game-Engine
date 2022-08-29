@@ -34,6 +34,13 @@ namespace vl
 		template<typename T>
 		T* GetActor();
 
+		template<typename T>
+		T* GetActorFromName(const std::string& name);
+
+		template<typename T>
+		std::vector<T*> GetActorsFromTag(const std::string& tag);
+
+
 		Game* GetGame() { return m_game; }
 
 	private:
@@ -51,5 +58,36 @@ namespace vl
 		}
 
 		return nullptr;
+	}
+
+	template<typename T>
+	inline T* Scene::GetActorFromName(const std::string& name)
+	{
+		for (auto& actor : m_actors)
+		{
+			if (actor.get()->GetName() == name)
+			{
+				T* result = dynamic_cast<T*>(actor.get());
+				if (result) return result;
+			}
+		}
+
+		return nullptr;
+	}
+
+	template<typename T>
+	inline std::vector<T*> Scene::GetActorsFromTag(const std::string& tag)
+	{
+		std::vector<T*> resultVec;
+		for (auto& actor : m_actors)
+		{
+			if (actor.get()->GetTag() == tag)
+			{
+				T* result = dynamic_cast<T*>(actor.get());
+				if (result) resultVec.push_back(result);
+			}
+		}
+
+		return resultVec;
 	}
 }

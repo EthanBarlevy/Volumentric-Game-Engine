@@ -6,6 +6,7 @@
 #include "Core/time.h"
 #include "Framework/component.h"
 #include "Physics/physicsSystem.h"
+#include "Framework/EventManager.h"
 
 namespace vl
 {
@@ -15,4 +16,5 @@ namespace vl
 	extern AudioSystem g_audioSystem;
 	extern ResourceManager g_resourceManager;
 	extern PhysicsSystem g_physicsSystem;
+	extern EventManager g_eventManager;
 }

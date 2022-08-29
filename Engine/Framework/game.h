@@ -18,8 +18,8 @@ namespace vl
 		virtual void Update() = 0;
 		virtual void Draw(Renderer& renderer) = 0;
 
-		int getScore() { return m_score; }
-		void addPoints(int points) { m_score += points; }
+		int GetScore() { return m_score; }
+		void AddPoints(int points) { m_score += points; }
 
 	protected:
 		std::unique_ptr<Scene> m_scene;

@@ -17,6 +17,7 @@ int main()
 	vl::g_audioSystem.Initialize();
 	vl::g_resourceManager.Initialize();
 	vl::g_physicsSystem.Initialize();
+	vl::g_eventManager.Initialize();
 
 	vl::Engine::Instance().Register();
 
@@ -36,6 +37,7 @@ int main()
 			vl::g_inputSystem.Update();
 			vl::g_audioSystem.Update();
 			vl::g_physicsSystem.Update();
+			vl::g_eventManager.Update();
 
 			if (vl::g_inputSystem.GetKeyDown(vl::key_escape)) quit = true;
 
@@ -59,4 +61,5 @@ int main()
 	vl::g_audioSystem.Shutdown();
 	vl::g_resourceManager.Shutodwn();
 	vl::g_physicsSystem.Shutdown();
+	vl::g_eventManager.Shutdown();
 }

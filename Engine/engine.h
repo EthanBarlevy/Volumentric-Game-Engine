@@ -22,6 +22,7 @@
 #include "Framework/game.h"
 #include "Framework/singleton.h"
 #include "Framework/factory.h"
+#include "Framework/EventManager.h"
 
 #include "Renderer/renderer.h"
 #include "Renderer/model.h"
@@ -42,6 +43,7 @@
 
 #include <memory>
 #include <vector>
+#include <variant>
 
 
 namespace vl
@@ -52,6 +54,7 @@ namespace vl
 	extern AudioSystem g_audioSystem;
 	extern ResourceManager g_resourceManager;
 	extern PhysicsSystem g_physicsSystem;
+	extern EventManager g_eventManager;
 
 	class Engine : public Singleton<Engine>
 	{
