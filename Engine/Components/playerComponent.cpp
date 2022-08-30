@@ -2,6 +2,7 @@
 #include "audioComponent.h"
 #include "physicsComponent.h"
 #include "collisionComponent.h"
+#include "RenderComponents/renderComponent.h"
 #include "Math/mathUtils.h"
 #include "Framework/actor.h"
 
@@ -13,20 +14,15 @@ namespace vl
 	}
 	bool PlayerComponent::Read(const rapidjson::Value& value)
 	{
-		READ_DATA(value, speed);
+		CharacterComponent::Read(value);
+		READ_DATA(value, jump);
 
 		return true;
 	}
 
 	void PlayerComponent::Initialize()
 	{
-		auto component = m_owner->GetComponent<CollisionComponent>();
-
-		if (component)
-		{
-			component->SetCollisionEnter(std::bind(&PlayerComponent::OnCollisionEnter, this, std::placeholders::_1));
-			component->SetCollisionExit(std::bind(&PlayerComponent::OnCollisionExit, this, std::placeholders::_1));
-		}
+		CharacterComponent::Initialize();
 	}
 
 	void PlayerComponent::Update()
@@ -43,10 +39,12 @@ namespace vl
 			direction = Vector2::RIGHT;
 		}
 
+		Vector2 velocity;
 		auto component = m_owner->GetComponent<PhysicsComponent>();
 		if (component)
 		{
 			component->ApplyForce(direction * speed);
+			velocity = component->velocity;
 		}
 
 		// jump
@@ -55,13 +53,19 @@ namespace vl
 			auto component = m_owner->GetComponent<PhysicsComponent>();
 			if (component)
 			{
-				component->ApplyForce(Vector2::UP * 300);
+				component->ApplyForce(Vector2::UP * 1000);
 			}
 		}
 
 		if (vl::g_inputSystem.GetKeyDown(vl::key_up))
 		{
 			// currently unused
+		}
+
+		auto renderComponent = m_owner->GetComponent<RenderComponent>();
+		if (renderComponent)
+		{
+			if (velocity.x != 0) renderComponent->SetFlipHorizontal(velocity.x < 0);
 		}
 	}
 
@@ -76,12 +80,37 @@ namespace vl
 			g_eventManager.Notify(event);
 			other->Destroy();
 		}
-		std::cout << "player enter\n";
+
+		if (other->GetTag() == "Enemy")
+		{
+			Event event;
+			event.name = "EVENT_DAMAGE";
+			event.data = damage;
+			event.reciever = other;
+
+			g_eventManager.Notify(event);
+		}
 	}
 
 	void PlayerComponent::OnCollisionExit(Actor* other)
 	{
-		std::cout << "player exit\n";
+		//
+	}
+
+	void PlayerComponent::OnNotify(const Event& event)
+	{
+		if (event.name == "EVENT_DAMAGE")
+		{
+			health -= std::get<float>(event.data);
+			std::cout << health << std::endl;
+			if (health <= 0)
+			{
+				Event event;
+				event.name = "EVENT_PLAYER_DEAD";
+
+				g_eventManager.Notify(event);
+			}
+		}
 	}
 }
 

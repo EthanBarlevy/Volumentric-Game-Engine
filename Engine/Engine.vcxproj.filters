@@ -165,6 +165,9 @@
     <ClCompile Include="Framework\eventManager.cpp">
       <Filter>Source Files\Framework\Game</Filter>
     </ClCompile>
+    <ClCompile Include="Components\characterComponent.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Math\mathUtils.h">
@@ -316,6 +319,9 @@
     </ClInclude>
     <ClInclude Include="Framework\eventManager.h">
       <Filter>Source Files\Framework\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\characterComponent.h">
+      <Filter>Source Files\Components</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

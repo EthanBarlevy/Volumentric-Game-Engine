@@ -1,10 +1,10 @@
 #pragma once
-#include "includes.h"
+#include "characterComponent.h"
 #include "Physics/collision.h"
 
 namespace vl
 {
-	class PlayerComponent : public Component, public ICollidable
+	class PlayerComponent : public CharacterComponent
 	{
 	public:
 		PlayerComponent() = default;
@@ -19,9 +19,10 @@ namespace vl
 
 		virtual void OnCollisionEnter(Actor* other) override;
 		virtual void OnCollisionExit(Actor* other) override;
+		virtual void OnNotify(const Event& event) override;
 
 	public:
-		float speed{ 0 };
+		float jump{ 1000 };
 
 	};
 }

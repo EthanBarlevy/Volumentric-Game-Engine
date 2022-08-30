@@ -147,6 +147,7 @@
     </ProjectReference>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="GameComponents\enemyComponent.cpp" />
     <ClCompile Include="mian.cpp" />
     <ClCompile Include="myGame.cpp" />
   </ItemGroup>
@@ -156,6 +157,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="GameComponents\enemyComponent.h" />
     <ClInclude Include="myGame.h" />
   </ItemGroup>
   <ItemGroup>

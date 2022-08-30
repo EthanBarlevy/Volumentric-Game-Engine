@@ -2,7 +2,7 @@
 #include "Framework/game.h"
 #include "Framework/Event.h"
 
-class myGame : public vl::Game
+class myGame : public vl::Game, public vl::INotify
 {
 public:
 	enum class GameState
@@ -20,11 +20,11 @@ public:
 	virtual void Update() override;
 	virtual void Draw(vl::Renderer& renderer) override;
 
-	void OnAddPoints(const vl::Event& event);
-	void OnPlayerDead(const vl::Event& event);
+	virtual void OnNotify(const vl:: Event& event) override;
 
 private:
 	GameState m_gameState{ GameState::titleScreen };
 	float m_stateTimer{ 0 };
 	int m_lives{ 3 };
+
 };

@@ -15,11 +15,13 @@ namespace vl
 			Actor* aA = (Actor*)fA->GetUserData().pointer;
 			Actor* aB = (Actor*)fB->GetUserData().pointer;
 
-			if (!aA->IsDestroyed() && aA->GetComponent<CollisionComponent>())
+			if (aA->IsDestroyed() || aB->IsDestroyed()) { return; }
+
+			if (aA->GetComponent<CollisionComponent>())
 			{
 				aA->GetComponent<CollisionComponent>()->OnCollisionEnter(aB);
 			}
-			if (!aB->IsDestroyed() && aB->GetComponent<CollisionComponent>())
+			if (aB->GetComponent<CollisionComponent>())
 			{
 				aB->GetComponent<CollisionComponent>()->OnCollisionEnter(aA);
 			}
@@ -36,11 +38,13 @@ namespace vl
 			Actor* aA = (Actor*)fA->GetUserData().pointer;
 			Actor* aB = (Actor*)fB->GetUserData().pointer;
 
-			if (!aA->IsDestroyed() && aA->GetComponent<CollisionComponent>())
+			if (aA->IsDestroyed() || aB->IsDestroyed()) { return; }
+
+			if (aA->GetComponent<CollisionComponent>())
 			{
 				aA->GetComponent<CollisionComponent>()->OnCollisionExit(aB);
 			}
-			if (!aB->IsDestroyed() && aB->GetComponent<CollisionComponent>())
+			if (aB->GetComponent<CollisionComponent>())
 			{
 				aB->GetComponent<CollisionComponent>()->OnCollisionExit(aA);
 			}

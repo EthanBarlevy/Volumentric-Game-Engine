@@ -1,8 +1,11 @@
 #include "myGame.h"
 #include "engine.h"
+#include "GameComponents/enemyComponent.h"
 
 void myGame::Initialize()
 {
+	REGISTER_CLASS(EnemyComponent);
+
 	m_scene = std::make_unique<vl::Scene>();
 
 	// load from json file to scene
@@ -19,7 +22,8 @@ void myGame::Initialize()
 	
 	m_scene->Initialize();
 
-	vl::g_eventManager.Subscribe("EVENT_ADD_POINTS", std::bind(&myGame::OnAddPoints, this, std::placeholders::_1));
+	vl::g_eventManager.Subscribe("EVENT_ADD_POINTS", std::bind(&myGame::OnNotify, this, std::placeholders::_1));
+	vl::g_eventManager.Subscribe("EVENT_PLAYER_DEAD", std::bind(&myGame::OnNotify, this, std::placeholders::_1));
 }
 
 void myGame::Shutdown()
@@ -43,6 +47,15 @@ void myGame::Update()
 		for (int i = 0; i < 10; i++)
 		{
 			auto actor = vl::Factory::Instance().Create<vl::Actor>("Coin");
+			actor->GetTransform().position = { vl::randomf(0, 500), 100.0f };
+			actor->Initialize();
+
+			m_scene->Add(std::move(actor));
+		}
+
+		for (int i = 0; i < 3; i++)
+		{
+			auto actor = vl::Factory::Instance().Create<vl::Actor>("Ghost");
 			actor->GetTransform().position = { vl::randomf(0, 500), 100.0f };
 			actor->Initialize();
 
@@ -78,18 +91,19 @@ void myGame::Draw(vl::Renderer& renderer)
 	m_scene->Draw(vl::g_renderer);
 }
 
-void myGame::OnAddPoints(const vl::Event& event)
+void myGame::OnNotify(const vl::Event& event)
 {
-	AddPoints(std::get<int>(event.data));
+	if (event.name == "EVENT_ADD_POINTS")
+	{
+		AddPoints(std::get<int>(event.data));
 
-
-	std::cout << event.name << std::endl;
-	std::cout << GetScore() << std::endl;
-}
-
-void myGame::OnPlayerDead(const vl::Event& event)
-{
-	m_gameState = GameState::playerDead;
-	m_lives--;
-	m_stateTimer = 3;
+		std::cout << event.name << std::endl;
+		std::cout << GetScore() << std::endl;
+	}
+	if (event.name == "EVENT_PLAYER_DEAD")
+	{
+		m_gameState = GameState::playerDead;
+		m_lives--;
+		m_stateTimer = 3;
+	}
 }

@@ -8,6 +8,9 @@
     <Filter Include="Resources">
       <UniqueIdentifier>{948f0f89-c514-4fc1-8d95-e45ab86e9f07}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Game Components">
+      <UniqueIdentifier>{4731c3d4-2d55-4711-84cb-d9ee44f1664f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mian.cpp">
@@ -16,10 +19,16 @@
     <ClCompile Include="myGame.cpp">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="GameComponents\enemyComponent.cpp">
+      <Filter>Game Components</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="myGame.h">
       <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="GameComponents\enemyComponent.h">
+      <Filter>Game Components</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -158,6 +158,7 @@
     <ClCompile Include="Audio\audioChannel.cpp" />
     <ClCompile Include="Audio\audioSystem.cpp" />
     <ClCompile Include="Components\audioComponent.cpp" />
+    <ClCompile Include="Components\characterComponent.cpp" />
     <ClCompile Include="Components\collisionComponent.cpp" />
     <ClCompile Include="Components\physicsComponent.cpp" />
     <ClCompile Include="Components\playerComponent.cpp" />
@@ -196,6 +197,7 @@
     <ClInclude Include="Audio\audioChannel.h" />
     <ClInclude Include="Audio\audioSystem.h" />
     <ClInclude Include="Components\audioComponent.h" />
+    <ClInclude Include="Components\characterComponent.h" />
     <ClInclude Include="Components\collisionComponent.h" />
     <ClInclude Include="Components\includes.h" />
     <ClInclude Include="Components\physicsComponent.h" />

@@ -42,7 +42,7 @@ namespace vl
 
     void SpriteAnimComponent::Draw(Renderer& renderer)
     {
-        renderer.Draw(m_texture, GetSource(), m_owner->GetTransform());
+        renderer.Draw(m_texture, GetSource(), m_owner->GetTransform(), registration, flipHorizontal);
     }
 
     Rect& SpriteAnimComponent::GetSource()

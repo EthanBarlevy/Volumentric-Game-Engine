@@ -27,6 +27,8 @@ namespace vl
 
 	private:
 		PhysicsSystem::CollisionData data;
+		Vector2 scale_offset = Vector2::ONE;
+
 		funcPtr m_enterFunction;
 		funcPtr m_exitFunction;
 	};

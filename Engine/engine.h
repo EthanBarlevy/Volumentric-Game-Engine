@@ -39,7 +39,8 @@
 #include "Components/audioComponent.h"
 #include "Components/physicsComponent.h"
 #include "Components/rbPhysicsComponent.h"
-#include "Components/CollisionComponent.h"
+#include "Components/collisionComponent.h"
+#include "Components/characterComponent.h"
 
 #include <memory>
 #include <vector>

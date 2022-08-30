@@ -107,7 +107,7 @@ namespace vl
 		SDL_RenderCopyEx(m_renderer, texture->m_texture, nullptr, &dest, transform.rotation, &center, SDL_FLIP_NONE);
 	}
 
-	void Renderer::Draw(std::shared_ptr<Texture> texture, const Rect& source, const Transform& transform, const Vector2& registration)
+	void Renderer::Draw(std::shared_ptr<Texture> texture, const Rect& source, const Transform& transform, const Vector2& registration, bool fliph)
 	{
 		Vector2 size = Vector2{ source.w, source.h };
 		size *= transform.scale;
@@ -130,6 +130,8 @@ namespace vl
 
 		SDL_Point center{ (int)origin.x, (int)origin.y };
 
-		SDL_RenderCopyEx(m_renderer, texture->m_texture, &src, &dest, transform.rotation, &center, SDL_FLIP_NONE);
+		SDL_RendererFlip flip = (fliph) ? SDL_FLIP_HORIZONTAL : SDL_FLIP_NONE;
+
+		SDL_RenderCopyEx(m_renderer, texture->m_texture, &src, &dest, transform.rotation, &center, flip);
 	}
 }

@@ -23,31 +23,6 @@
       },
       {
          "type":"Actor",
-         "name":"Floor",
-         "transform":{
-            "position":[
-               250,
-               450
-            ],
-            "scale":[
-               1,
-               1
-            ],
-            "rotation":0
-         },
-         "components":[
-            {
-               "type":"RBPhysicsComponent",
-               "data.gravity_scale":0,
-               "data.is_dynamic":false
-            },
-            {
-               "type":"CollisionComponent"
-            }
-         ]
-      },
-      {
-         "type":"Actor",
          "name":"Player",
          "tag":"Player",
          "transform":{
@@ -64,11 +39,11 @@
          "components":[
             {
                "type":"PlayerComponent",
-               "speed":30
+               "speed":90
             },
             {
                "type":"RBPhysicsComponent",
-               "damping":0.4,
+               "damping":0.99,
                "data.gravity_scale":1,
                "data.constrain_angle":true
             },
