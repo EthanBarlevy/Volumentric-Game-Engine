@@ -18,6 +18,8 @@ namespace vl
 		virtual void Update() override;
 		virtual void Draw(Renderer& renderer) override;
 
+		Rect& GetSource() override;
+
 	public:
 		float fps{ 0 };
 		int num_columns{ 0 };

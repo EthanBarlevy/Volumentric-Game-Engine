@@ -34,7 +34,7 @@ void myGame::Update()
 	case GameState::titleScreen:
 		if (vl::g_inputSystem.GetKeyState(vl::key_space) == vl::InputSystem::State::Pressed)
 		{
-			//m_scene->GetActorFromName("Title")->SetActive(false);
+ 			m_scene->GetActorFromName<vl::Actor>("Text")->SetActive(false);
 			m_gameState = GameState::startLevel;
 		}
 
@@ -56,7 +56,7 @@ void myGame::Update()
 
 		break;
 	case GameState::playerDead:
-		m_stateTimer -= vl::g_time.deltaTime;
+		m_stateTimer -= (float)vl::g_time.deltaTime;
 		if (m_stateTimer <= 0)
 		{
 			m_gameState = (m_lives > 0) ? GameState::startLevel : GameState::gameOver;

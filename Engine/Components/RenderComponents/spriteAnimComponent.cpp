@@ -38,8 +38,15 @@ namespace vl
                 frame = start_frame;
             }
         }
+    }
 
-        // calculate source rect
+    void SpriteAnimComponent::Draw(Renderer& renderer)
+    {
+        renderer.Draw(m_texture, GetSource(), m_owner->GetTransform());
+    }
+
+    Rect& SpriteAnimComponent::GetSource()
+    {
         Vector2 cellSize = m_texture->GetSize() / Vector2{ num_columns, num_rows };
 
         int column = (frame - 1) % num_columns;
@@ -49,10 +56,7 @@ namespace vl
         source.y = (int)(row * cellSize.y);
         source.w = (int)(cellSize.x);
         source.h = (int)(cellSize.y);
-    }
 
-    void SpriteAnimComponent::Draw(Renderer& renderer)
-    {
-        renderer.Draw(m_texture, source, m_owner->GetTransform());
+        return source;
     }
 }

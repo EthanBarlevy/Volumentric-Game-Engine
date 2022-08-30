@@ -24,10 +24,6 @@
             },
             {
                "type":"CollisionComponent",
-               "data.size":[
-                  32,
-                  32
-               ],
                "data.restitution":0
             },
             {

@@ -42,11 +42,7 @@
                "data.is_dynamic":false
             },
             {
-               "type":"CollisionComponent",
-               "data.size":[
-                  500,
-                  24
-               ]
+               "type":"CollisionComponent"
             }
          ]
       },
@@ -77,11 +73,7 @@
                "data.constrain_angle":true
             },
             {
-               "type":"CollisionComponent",
-               "data.size":[
-                  38,
-                  48
-               ]
+               "type":"CollisionComponent"
             },
             {
                "type":"AudioComponent",
