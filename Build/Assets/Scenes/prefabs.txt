@@ -4,6 +4,7 @@
 			"type":"Actor",
 			"name":"Coin",
 			"tag":"Pickup",
+			"lifespan":4,
 			"prefab":true,
 			"transform":{
 				"position":[
@@ -28,12 +29,18 @@
 				},
 				{
 					"type":"SpriteAnimComponent",
-					"texture_name":"Sprites/coin.png",
-					"fps":5,
-					"num_columns":8,
-					"num_rows":1,
-					"start_frame":1,
-					"end_frame":8
+					"default_sequence":"idle",
+					"sequences":[
+						{
+							"sequence.name":"idle",
+							"sequence.fps":8,
+							"sequence.num_columns":8,
+							"sequence.num_rows":1,
+							"sequence.start_frame":1,
+							"sequence.end_frame":8,
+							"texture_name":"Sprites/coin.png"
+						}
+					]
 				}
 			]
 		},
@@ -69,12 +76,18 @@
 				},
 				{
 					"type":"SpriteAnimComponent",
-					"texture_name":"Sprites/anim2.png",
-					"fps":14,
-					"num_columns":7,
-					"num_rows":1,
-					"start_frame":1,
-					"end_frame":7
+					"default_sequence":"idle",
+					"sequences":[
+						{
+							"sequence.name":"idle",
+							"sequence.fps":7,
+							"sequence.num_columns":7,
+							"sequence.num_rows":1,
+							"sequence.start_frame":1,
+							"sequence.end_frame":7,
+							"texture_name":"Sprites/anim2.png"
+						}
+					]
 				},
 				{
 					"type":"EnemyComponent",

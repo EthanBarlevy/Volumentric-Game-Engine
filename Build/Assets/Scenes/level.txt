@@ -58,12 +58,27 @@
             },
             {
                "type":"SpriteAnimComponent",
-               "texture_name":"Sprites/gothic-hero-idle.png",
-               "fps":5,
-               "num_columns":4,
-               "num_rows":1,
-               "start_frame":1,
-               "end_frame":4
+               "default_sequence":"idle",
+			   "sequences":[
+                    {
+					    "sequence.name":"idle",
+					    "sequence.fps":4,
+					    "sequence.num_columns":4,
+					    "sequence.num_rows":1,
+					    "sequence.start_frame":1,
+					    "sequence.end_frame":4,
+					    "texture_name":"Sprites/gothic-hero-idle.png"
+                    },
+                    {
+					    "sequence.name":"idle",
+					    "sequence.fps":24,
+					    "sequence.num_columns":12,
+					    "sequence.num_rows":1,
+					    "sequence.start_frame":1,
+					    "sequence.end_frame":12,
+					    "texture_name":"Sprites/gothic-hero-run.png"
+                    }
+				]
             }
          ]
       },
@@ -104,6 +119,27 @@
                "color":[255, 255, 0, 255] 
             } 
          ] 
-      } 
+      },
+      {
+            "type":"Actor",
+            "name":"Camera",
+            "transform":{
+                "position":[
+                    250,
+                    250
+                ],
+                "scale":[
+                    1,
+                    1
+                ],
+                "rotation":0
+            },
+            "components":[
+                {
+                    "type":"CameraComponent",
+                    "viewport_size": [500, 500]
+                }
+            ]
+      }
    ]
 }

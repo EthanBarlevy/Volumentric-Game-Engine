@@ -41,6 +41,7 @@
 #include "Components/rbPhysicsComponent.h"
 #include "Components/collisionComponent.h"
 #include "Components/characterComponent.h"
+#include "Components/cameraComponent.h"
 
 #include <memory>
 #include <vector>

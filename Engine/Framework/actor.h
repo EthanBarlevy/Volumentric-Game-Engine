@@ -63,7 +63,7 @@ namespace vl
 
 		std::string tag;
 		std::string name;
-
+		float lifespan{ 0 };
 		bool active{ true };
 		bool m_destroy{ false };
 	};

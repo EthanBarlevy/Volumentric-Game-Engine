@@ -2,9 +2,10 @@
 #include "audioComponent.h"
 #include "physicsComponent.h"
 #include "collisionComponent.h"
-#include "RenderComponents/renderComponent.h"
+#include "RenderComponents/spriteAnimComponent.h"
 #include "Math/mathUtils.h"
 #include "Framework/actor.h"
+#include "Framework/scene.h"
 
 namespace vl
 {
@@ -62,10 +63,28 @@ namespace vl
 			// currently unused
 		}
 
-		auto renderComponent = m_owner->GetComponent<RenderComponent>();
-		if (renderComponent)
+		auto animComponent = m_owner->GetComponent<SpriteAnimComponent>();
+		if (animComponent)
 		{
-			if (velocity.x != 0) renderComponent->SetFlipHorizontal(velocity.x < 0);
+			if (velocity.x != 0) animComponent->SetFlipHorizontal(velocity.x < 0);
+			if (std::fabs(velocity.x) > 0)
+			{
+				animComponent->SetSequence("run");
+			}
+			else
+			{
+				animComponent->SetSequence("idle");
+			}
+		}
+
+		// camera stuff
+		auto camera = m_owner->GetScene()->GetActorFromName<Actor>("Camera");
+		if (camera)
+		{
+			// instant move
+			//camera->GetTransform().position = m_owner->GetTransform().position;
+			// smooth move
+			camera->GetTransform().position = math::Lerp(camera->GetTransform().position, m_owner->GetTransform().position, 2 * (float)g_time.deltaTime);
 		}
 	}
 

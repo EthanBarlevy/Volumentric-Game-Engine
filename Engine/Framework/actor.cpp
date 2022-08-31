@@ -9,6 +9,7 @@ namespace vl
 	{
 		name = other.name;
 		tag = other.tag;
+		lifespan = other.lifespan;
 		m_transform = other.m_transform;
 		m_scene = other.m_scene;
 
@@ -29,6 +30,7 @@ namespace vl
 		READ_DATA(value, tag);
 		READ_DATA(value, name);
 		READ_DATA(value, active);
+		READ_DATA(value, lifespan);
 
 		if (value.HasMember("transform")) { m_transform.Read(value["transform"]); }
 
@@ -68,6 +70,16 @@ namespace vl
 	void Actor::Update()
 	{
 		if (!active) { return; }
+
+		if (lifespan)
+		{
+			lifespan -= (float)g_time.deltaTime;
+			if (lifespan < 0)
+			{
+				Destroy();
+			}
+		}
+
 		for (auto& component : m_components)
 		{
 			component->Update();
