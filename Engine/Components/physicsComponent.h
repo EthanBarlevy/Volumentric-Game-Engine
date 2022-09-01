@@ -22,6 +22,5 @@ namespace vl
 		Vector2 acceleration{ Vector2::ZERO };
 
 		float damping{ 0.7f };
-
 	};
 }

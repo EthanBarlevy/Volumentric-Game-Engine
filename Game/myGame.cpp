@@ -44,6 +44,12 @@ void myGame::Update()
 
 		break;
 	case GameState::startLevel:
+	{
+		auto player = vl::Factory::Instance().Create<vl::Actor>("Player");
+		player->Initialize();
+
+		m_scene->Add(std::move(player));
+	}
 		for (int i = 0; i < 10; i++)
 		{
 			auto actor = vl::Factory::Instance().Create<vl::Actor>("Coin");
@@ -53,7 +59,7 @@ void myGame::Update()
 			m_scene->Add(std::move(actor));
 		}
 
-		for (int i = 0; i < 3; i++)
+		for (int i = 0; i < 0; i++)
 		{
 			auto actor = vl::Factory::Instance().Create<vl::Actor>("Ghost");
 			actor->GetTransform().position = { vl::randomf(0, 500), 100.0f };

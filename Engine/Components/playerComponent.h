@@ -23,6 +23,7 @@ namespace vl
 
 	public:
 		float jump{ 1000 };
-
+		float on_ground{ 0 };
+		bool jumping{ false };
 	};
 }

@@ -49,13 +49,14 @@ namespace vl
 		}
 
 		// jump
-		if (vl::g_inputSystem.GetKeyState(vl::key_space) == InputSystem::State::Pressed)
+		if (vl::g_inputSystem.GetKeyState(vl::key_space) == InputSystem::State::Pressed && on_ground)
 		{
 			auto component = m_owner->GetComponent<PhysicsComponent>();
 			if (component)
 			{
-				component->ApplyForce(Vector2::UP * 1000);
+				component->ApplyForce(Vector2::UP * 2000);
 			}
+			jumping = true;
 		}
 
 		if (vl::g_inputSystem.GetKeyDown(vl::key_up))
@@ -67,13 +68,27 @@ namespace vl
 		if (animComponent)
 		{
 			if (velocity.x != 0) animComponent->SetFlipHorizontal(velocity.x < 0);
-			if (std::fabs(velocity.x) > 0)
+			if (!on_ground)
 			{
-				animComponent->SetSequence("run");
+				if (jumping)
+				{
+					animComponent->SetSequence("jump");
+				}
+				else
+				{
+					animComponent->SetSequence("fall");
+				}
 			}
 			else
 			{
-				animComponent->SetSequence("idle");
+				if (std::fabs(velocity.x) > 0)
+				{
+					animComponent->SetSequence("run");
+				}
+				else
+				{
+					animComponent->SetSequence("idle");
+				}
 			}
 		}
 
@@ -82,14 +97,19 @@ namespace vl
 		if (camera)
 		{
 			// instant move
-			//camera->GetTransform().position = m_owner->GetTransform().position;
+			camera->GetTransform().position = m_owner->GetTransform().position;
 			// smooth move
-			camera->GetTransform().position = math::Lerp(camera->GetTransform().position, m_owner->GetTransform().position, 2 * (float)g_time.deltaTime);
+			//camera->GetTransform().position = math::Lerp(camera->GetTransform().position, m_owner->GetTransform().position, 2 * (float)g_time.deltaTime);
 		}
 	}
 
 	void PlayerComponent::OnCollisionEnter(Actor* other)
 	{
+		if (jumping)
+		{
+			jumping = false;
+		}
+
 		if (other->GetName() == "Coin")
 		{
 			Event event;
@@ -109,11 +129,19 @@ namespace vl
 
 			g_eventManager.Notify(event);
 		}
+
+		if (other->GetTag() == "Ground")
+		{
+			on_ground++;
+		}
 	}
 
 	void PlayerComponent::OnCollisionExit(Actor* other)
 	{
-		//
+		if (other->GetTag() == "Ground")
+		{
+			on_ground--;
+		}
 	}
 
 	void PlayerComponent::OnNotify(const Event& event)

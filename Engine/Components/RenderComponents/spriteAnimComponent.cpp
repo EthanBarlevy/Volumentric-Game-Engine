@@ -23,6 +23,7 @@ namespace vl
                 READ_DATA(sequenceValue, sequence.num_rows);
                 READ_DATA(sequenceValue, sequence.start_frame);
                 READ_DATA(sequenceValue, sequence.end_frame);
+                READ_DATA(sequenceValue, sequence.loop);
 
                 std::string texture_name;
                 READ_DATA(sequenceValue, texture_name);
@@ -54,7 +55,10 @@ namespace vl
             frame++;
             if (frame > m_sequence->end_frame)
             {
-                frame = m_sequence->start_frame;
+                if (m_sequence->loop)
+                {
+                    frame = m_sequence->start_frame;
+                }
             }
         }
     }
@@ -81,8 +85,28 @@ namespace vl
     {
         Vector2 cellSize = m_sequence->texture->GetSize() / Vector2{ m_sequence->num_columns, m_sequence->num_rows };
 
-        int column = (frame - 1) % m_sequence->num_columns;
-        int row = (frame - 1) / m_sequence->num_columns;
+        int row;
+        int column;
+
+        if (!m_sequence->loop)
+        {
+            if (frame >= m_sequence->end_frame)
+            {
+                column = (m_sequence->end_frame - 1) % m_sequence->num_columns;
+                row = (m_sequence->end_frame - 1) / m_sequence->num_columns;
+            }
+            else
+            {
+                column = (frame - 1) % m_sequence->num_columns;
+                row = (frame - 1) / m_sequence->num_columns;
+            }
+        }
+        else
+        {
+            column = (frame - 1) % m_sequence->num_columns;
+            row = (frame - 1) / m_sequence->num_columns;
+        }
+
 
         source.x = (int)(column * cellSize.x);
         source.y = (int)(row * cellSize.y);
