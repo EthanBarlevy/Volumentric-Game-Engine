@@ -13,6 +13,7 @@ namespace vl
 	{
 		std::string texture_name;
 		READ_DATA(value, texture_name);
+		READ_DATA(value, paralax);
 
 		m_texture = g_resourceManager.Get<Texture>(texture_name, g_renderer);
 
@@ -34,6 +35,6 @@ namespace vl
 
 	void SpriteComponent::Draw(Renderer& renderer)
 	{
-		renderer.Draw(m_texture, GetSource(), m_owner->GetTransform(), registration, flipHorizontal);
+		renderer.Draw(m_texture, GetSource(), m_owner->GetTransform(), registration, flipHorizontal, paralax);
 	}
 }

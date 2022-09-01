@@ -17,7 +17,11 @@
 			"components":[
 				{
 					"type":"SpriteComponent",
-					"texture_name":"Sprites/bg1.png"
+					"texture_name":"Sprites/grave/Background_0.png",
+					"paralax":[
+						0,
+						0
+					]
 				}
 			]
 		},

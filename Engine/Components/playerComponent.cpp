@@ -54,7 +54,7 @@ namespace vl
 			auto component = m_owner->GetComponent<PhysicsComponent>();
 			if (component)
 			{
-				component->ApplyForce(Vector2::UP * 2000);
+				component->ApplyForce(Vector2::UP * 3000);
 			}
 			jumping = true;
 		}

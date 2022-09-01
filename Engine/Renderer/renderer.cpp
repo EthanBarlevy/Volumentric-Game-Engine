@@ -109,9 +109,15 @@ namespace vl
 		SDL_RenderCopyEx(m_renderer, texture->m_texture, nullptr, &dest, transform.rotation, &center, SDL_FLIP_NONE);
 	}
 
-	void Renderer::Draw(std::shared_ptr<Texture> texture, const Rect& source, const Transform& transform, const Vector2& registration, bool fliph)
+	void Renderer::Draw(std::shared_ptr<Texture> texture, const Rect& source, const Transform& transform, const Vector2& registration, bool fliph, const Vector2& paralax)
 	{
 		Matrix3x3 mx = m_viewport * m_view * transform.matrix;
+
+		if (paralax.x != 1 || paralax.y != 1)
+		{
+			mx[2][0] = transform.matrix[2][0] * paralax.x;
+			mx[2][1] = transform.matrix[2][1] * paralax.y;
+		}
 
 		Vector2 size = Vector2{ source.w, source.h };
 		size *= mx.GetScale();

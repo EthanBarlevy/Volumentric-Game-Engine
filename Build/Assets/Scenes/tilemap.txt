@@ -3,12 +3,12 @@
 		{
 			"type":"Actor",
 			"name":"tile01",
-			"tag":"Ground",
+			"tag":"Air",
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -27,19 +27,20 @@
 					"data.is_dynamic":false
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
 		{
 			"type":"Actor",
 			"name":"tile02",
-			"tag":"Ground",
+			"tag":"GroundCute",
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -55,22 +56,24 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
 		{
 			"type":"Actor",
 			"name":"tile03",
-			"tag":"Ground",
+			"tag":"GroundCute",
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -86,22 +89,24 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
 		{
 			"type":"Actor",
 			"name":"tile04",
-			"tag":"Ground",
+			"tag":"GroundCute",
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -117,22 +122,24 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
 		{
 			"type":"Actor",
 			"name":"tile05",
-			"tag":"Ground",
+			"tag":"GroundCute",
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -148,22 +155,24 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
 		{
 			"type":"Actor",
 			"name":"tile06",
-			"tag":"Ground",
+			"tag":"GroundCute",
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -179,22 +188,24 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
 		{
 			"type":"Actor",
 			"name":"tile07",
-			"tag":"Ground",
+			"tag":"GroundCute",
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -210,22 +221,24 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
 		{
 			"type":"Actor",
 			"name":"tile08",
-			"tag":"Ground",
+			"tag":"Air",
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -241,22 +254,24 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
 		{
 			"type":"Actor",
 			"name":"tile09",
-			"tag":"Ground",
+			"tag":"Air",
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -272,22 +287,24 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
 		{
 			"type":"Actor",
 			"name":"tile10",
-			"tag":"Ground",
+			"tag":"Air",
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -303,22 +320,24 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
 		{
 			"type":"Actor",
 			"name":"tile11",
-			"tag":"Ground",
+			"tag":"Air",
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -334,22 +353,24 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
 		{
 			"type":"Actor",
 			"name":"tile12",
-			"tag":"Ground",
+			"tag":"Air",
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -365,10 +386,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -379,8 +402,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -410,8 +433,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -441,8 +464,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -472,8 +495,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -503,8 +526,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -534,8 +557,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -561,12 +584,12 @@
 		{
 			"type":"Actor",
 			"name":"tile19",
-			"tag":"Ground",
+			"tag":"BGProp",
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -582,22 +605,24 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
 		{
 			"type":"Actor",
 			"name":"tile20",
-			"tag":"Ground",
+			"tag":"BGProp",
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -613,22 +638,24 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
 		{
 			"type":"Actor",
 			"name":"tile21",
-			"tag":"Ground",
+			"tag":"Air",
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -644,22 +671,24 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
 		{
 			"type":"Actor",
 			"name":"tile22",
-			"tag":"Ground",
+			"tag":"Air",
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -675,22 +704,24 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
 		{
 			"type":"Actor",
 			"name":"tile23",
-			"tag":"Ground",
+			"tag":"GroundCute",
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -706,10 +737,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -720,8 +753,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -751,8 +784,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -782,8 +815,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -809,12 +842,12 @@
 		{
 			"type":"Actor",
 			"name":"tile27",
-			"tag":"Ground",
+			"tag":"GroundCute",
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -830,22 +863,24 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
 		{
 			"type":"Actor",
 			"name":"tile28",
-			"tag":"Ground",
+			"tag":"GroundCute",
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -861,22 +896,24 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
 		{
 			"type":"Actor",
 			"name":"tile29",
-			"tag":"Ground",
+			"tag":"GroundCute",
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -892,22 +929,24 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
 		{
 			"type":"Actor",
 			"name":"tile30",
-			"tag":"Ground",
+			"tag":"GroundCute",
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -923,22 +962,24 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
 		{
 			"type":"Actor",
 			"name":"tile31",
-			"tag":"Ground",
+			"tag":"GroundCute",
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -954,22 +995,24 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
 		{
 			"type":"Actor",
 			"name":"tile32",
-			"tag":"Ground",
+			"tag":"GroundCute",
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -985,22 +1028,24 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
 		{
 			"type":"Actor",
 			"name":"tile33",
-			"tag":"Ground",
+			"tag":"Air",
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -1016,10 +1061,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -1030,8 +1077,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -1061,8 +1108,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -1092,8 +1139,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -1123,8 +1170,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -1154,8 +1201,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -1185,8 +1232,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -1216,8 +1263,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -1247,8 +1294,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -1278,8 +1325,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -1309,8 +1356,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -1340,8 +1387,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -1357,10 +1404,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -1371,8 +1420,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -1402,8 +1451,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -1433,8 +1482,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -1464,8 +1513,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -1495,8 +1544,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -1526,8 +1575,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -1543,10 +1592,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -1557,8 +1608,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -1574,10 +1625,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -1588,8 +1641,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -1605,10 +1658,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -1619,8 +1674,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -1636,10 +1691,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -1650,8 +1707,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -1667,10 +1724,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -1681,8 +1740,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -1698,10 +1757,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -1712,8 +1773,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -1743,8 +1804,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -1774,8 +1835,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -1805,8 +1866,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -1836,8 +1897,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -1867,8 +1928,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -1884,10 +1945,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -1898,8 +1961,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -1929,8 +1992,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -1960,8 +2023,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -1991,8 +2054,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -2008,10 +2071,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -2022,8 +2087,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -2039,10 +2104,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -2053,8 +2120,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -2070,10 +2137,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -2084,8 +2153,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -2115,8 +2184,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -2146,8 +2215,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -2177,8 +2246,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -2194,10 +2263,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -2208,8 +2279,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -2239,8 +2310,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -2270,8 +2341,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -2301,8 +2372,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -2332,8 +2403,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -2363,8 +2434,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -2380,10 +2451,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -2394,8 +2467,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -2411,10 +2484,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -2425,8 +2500,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -2442,10 +2517,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -2456,8 +2533,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -2473,10 +2550,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -2487,8 +2566,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -2504,10 +2583,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -2518,8 +2599,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -2535,10 +2616,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -2549,8 +2632,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -2566,10 +2649,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -2580,8 +2665,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -2597,10 +2682,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -2611,8 +2698,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -2628,10 +2715,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -2642,8 +2731,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -2659,10 +2748,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -2673,8 +2764,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -2690,10 +2781,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -2704,8 +2797,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -2721,10 +2814,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -2735,8 +2830,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -2752,10 +2847,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -2766,8 +2863,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -2783,10 +2880,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -2797,8 +2896,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -2814,10 +2913,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -2828,8 +2929,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -2845,10 +2946,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -2859,8 +2962,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -2876,10 +2979,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -2890,8 +2995,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -2907,10 +3012,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -2921,8 +3028,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -2938,10 +3045,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -2952,8 +3061,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -2969,10 +3078,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -2983,8 +3094,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -3000,10 +3111,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -3014,8 +3127,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -3031,10 +3144,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -3045,8 +3160,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -3062,10 +3177,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -3076,8 +3193,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -3093,10 +3210,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -3107,8 +3226,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -3124,10 +3243,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -3138,8 +3259,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -3155,10 +3276,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -3169,8 +3292,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -3186,10 +3309,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -3200,8 +3325,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -3217,10 +3342,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -3231,8 +3358,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -3248,10 +3375,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -3262,8 +3391,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -3279,10 +3408,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -3293,8 +3424,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -3310,10 +3441,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -3324,8 +3457,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -3341,10 +3474,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -3355,8 +3490,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -3372,10 +3507,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -3386,8 +3523,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -3403,10 +3540,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -3417,8 +3556,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -3434,10 +3573,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -3448,8 +3589,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -3465,10 +3606,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -3479,8 +3622,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -3496,10 +3639,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -3510,8 +3655,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -3527,10 +3672,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -3541,8 +3688,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -3558,10 +3705,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -3572,8 +3721,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -3589,10 +3738,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -3603,8 +3754,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -3620,10 +3771,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -3634,8 +3787,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -3651,10 +3804,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -3665,8 +3820,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -3682,10 +3837,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -3696,8 +3853,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -3713,10 +3870,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -3727,8 +3886,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -3744,10 +3903,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -3758,8 +3919,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -3775,10 +3936,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -3789,8 +3952,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -3806,10 +3969,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -3820,8 +3985,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -3837,10 +4002,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -3851,8 +4018,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -3868,10 +4035,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -3882,8 +4051,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -3899,10 +4068,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -3913,8 +4084,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -3930,10 +4101,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -3944,8 +4117,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -3961,10 +4134,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -3975,8 +4150,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -3992,10 +4167,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -4006,8 +4183,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -4023,10 +4200,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -4037,8 +4216,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -4054,10 +4233,12 @@
 				},
 				{
 					"type":"RBPhysicsComponent",
-					"data.is_dynamic":false
+					"data.is_dynamic":false,
+					"data.is_trigger":true
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -4068,8 +4249,8 @@
 			"prefab":true,
 			"transform":{
 				"scale":[
-					1,
-					1
+					2,
+					2
 				]
 			},
 			"components":[
@@ -4088,7 +4269,8 @@
 					"data.is_dynamic":false
 				},
 				{
-					"type":"CollisionComponent"
+					"type":"CollisionComponent",
+					"data.is_trigger":true
 				}
 			]
 		},
@@ -4097,21 +4279,20 @@
 			"name":"World",
 			"transform":{
 				"position":[
-					32,
-					32
+					0,
+					0
 				]
 			},
 			"components":[
 				{
 					"type":"TilemapComponent",
-					"num_columns":8,
-					"num_rows":9,
+					"num_columns":50,
+					"num_rows":20,
 					"size":[
 						64,
 						64
 					],
 					"tile_names":[
-						"",
 						"tile01",
 						"tile02",
 						"tile03",

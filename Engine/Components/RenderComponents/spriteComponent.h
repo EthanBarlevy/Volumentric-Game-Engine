@@ -20,6 +20,6 @@ namespace vl
 
 	public:
 		std::shared_ptr<Texture> m_texture;
-
+		Vector2 paralax = Vector2::ONE;
 	};
 }
