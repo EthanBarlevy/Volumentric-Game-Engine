@@ -28,16 +28,28 @@ namespace vl
 
 	void PlayerComponent::Update()
 	{
+		if (attack_time > 0)
+		{
+			attack_time -= (float)g_time.deltaTime;
+		}
+		else
+		{
+			attacking = false;
+		}
 		// movement
 		Vector2 direction = Vector2::ZERO;
-		if (vl::g_inputSystem.GetKeyDown(vl::key_left))
-		{
-			direction = Vector2::LEFT;
-		}
 
-		if (vl::g_inputSystem.GetKeyDown(vl::key_right))
+		if (!attacking)
 		{
-			direction = Vector2::RIGHT;
+			if (vl::g_inputSystem.GetKeyDown(vl::key_left))
+			{
+				direction = Vector2::LEFT;
+			}
+
+			if (vl::g_inputSystem.GetKeyDown(vl::key_right))
+			{
+				direction = Vector2::RIGHT;
+			}
 		}
 
 		Vector2 velocity;
@@ -48,8 +60,13 @@ namespace vl
 			velocity = component->velocity;
 		}
 
+		if (vl::g_inputSystem.GetKeyState(vl::key_space) == InputSystem::State::Pressed)
+		{
+			//
+		}
+
 		// jump
-		if (vl::g_inputSystem.GetKeyState(vl::key_space) == InputSystem::State::Pressed && on_ground)
+		if (vl::g_inputSystem.GetKeyState(vl::key_up) == InputSystem::State::Pressed && on_ground)
 		{
 			auto component = m_owner->GetComponent<PhysicsComponent>();
 			if (component)
@@ -59,9 +76,10 @@ namespace vl
 			jumping = true;
 		}
 
-		if (vl::g_inputSystem.GetKeyDown(vl::key_up))
+		if (vl::g_inputSystem.GetButtonState(vl::button_left) == InputSystem::State::Pressed && !attacking)
 		{
-			// currently unused
+			attacking = true;
+			attack_time = 0.3;
 		}
 
 		auto animComponent = m_owner->GetComponent<SpriteAnimComponent>();
@@ -81,13 +99,20 @@ namespace vl
 			}
 			else
 			{
-				if (std::fabs(velocity.x) > 0)
+				if (attacking)
 				{
-					animComponent->SetSequence("run");
-				}
+					animComponent->SetSequence("attack");
+				} 
 				else
 				{
-					animComponent->SetSequence("idle");
+					if (std::fabs(velocity.x) > 0)
+					{
+						animComponent->SetSequence("run");
+					}
+					else
+					{
+						animComponent->SetSequence("idle");
+					}
 				}
 			}
 		}

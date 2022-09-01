@@ -8,7 +8,7 @@ void vl::CameraComponent::Initialize()
 
 void vl::CameraComponent::Update()
 {
-    Matrix3x3 mxTranslation = Matrix3x3::CreateTranslation(-m_owner->GetTransform().position);
+    Matrix3x3 mxTranslation = Matrix3x3::CreateTranslation({ -m_owner->GetTransform().position.x, -m_owner->GetTransform().position.y + 100 });
     Matrix3x3 mxRotation = Matrix3x3::CreateRotation(-m_owner->GetTransform().rotation);
 
     m_view = mxTranslation * mxRotation;

@@ -50,7 +50,7 @@ void myGame::Update()
 
 		m_scene->Add(std::move(player));
 	}
-		for (int i = 0; i < 10; i++)
+		for (int i = 0; i < 0; i++)
 		{
 			auto actor = vl::Factory::Instance().Create<vl::Actor>("Coin");
 			actor->GetTransform().position = { vl::randomf(0, 500), 100.0f };
