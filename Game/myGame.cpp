@@ -24,6 +24,7 @@ void myGame::Initialize()
 
 	vl::g_eventManager.Subscribe("EVENT_ADD_POINTS", std::bind(&myGame::OnNotify, this, std::placeholders::_1));
 	vl::g_eventManager.Subscribe("EVENT_PLAYER_DEAD", std::bind(&myGame::OnNotify, this, std::placeholders::_1));
+	vl::g_eventManager.Subscribe("EVENT_SPAWN", std::bind(&myGame::OnNotify, this, std::placeholders::_1));
 }
 
 void myGame::Shutdown()
@@ -50,24 +51,6 @@ void myGame::Update()
 
 		m_scene->Add(std::move(player));
 	}
-		for (int i = 0; i < 0; i++)
-		{
-			auto actor = vl::Factory::Instance().Create<vl::Actor>("Coin");
-			actor->GetTransform().position = { vl::randomf(0, 500), 100.0f };
-			actor->Initialize();
-
-			m_scene->Add(std::move(actor));
-		}
-
-		for (int i = 0; i < 0; i++)
-		{
-			auto actor = vl::Factory::Instance().Create<vl::Actor>("Ghost");
-			actor->GetTransform().position = { vl::randomf(0, 500), 100.0f };
-			actor->Initialize();
-
-			m_scene->Add(std::move(actor));
-		}
-
 		m_gameState = GameState::game;
 
 		break;
@@ -87,6 +70,11 @@ void myGame::Update()
 	default:
 		// how??
 		break;
+	}
+
+	if (m_spawned_time < 100)
+	{
+		m_spawned_time += (float)vl::g_time.deltaTime;
 	}
 
 	m_scene->Update();
@@ -111,5 +99,18 @@ void myGame::OnNotify(const vl::Event& event)
 		m_gameState = GameState::playerDead;
 		m_lives--;
 		m_stateTimer = 3;
+	}
+	if (event.name == "EVENT_SPAWN")
+	{
+		if (m_spawned_time == 100) 
+		{
+
+			//auto actor = vl::Factory::Instance().Create<vl::Actor>("Ghost");
+			//actor->GetTransform().position = { vl::randomf(0, 500), 100.0f };
+			//actor->Initialize();
+
+			//m_scene->Add(std::move(actor));
+			m_spawned_time = 0;
+		}
 	}
 }

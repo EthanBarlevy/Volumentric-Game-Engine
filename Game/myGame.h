@@ -26,5 +26,5 @@ private:
 	GameState m_gameState{ GameState::titleScreen };
 	float m_stateTimer{ 0 };
 	int m_lives{ 3 };
-
+	float m_spawned_time{ 100 };
 };

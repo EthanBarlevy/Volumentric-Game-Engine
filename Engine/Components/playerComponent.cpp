@@ -79,7 +79,7 @@ namespace vl
 		if (vl::g_inputSystem.GetButtonState(vl::button_left) == InputSystem::State::Pressed && !attacking)
 		{
 			attacking = true;
-			attack_time = 0.3;
+			attack_time = 0.3f;
 		}
 
 		auto animComponent = m_owner->GetComponent<SpriteAnimComponent>();
@@ -158,6 +158,14 @@ namespace vl
 		if (other->GetTag() == "Ground")
 		{
 			on_ground++;
+		}
+
+		if (other->GetTag() == "Spawner")
+		{
+			Event event;
+			event.name = "EVENT_SPAWN";
+
+			g_eventManager.Notify(event);
 		}
 	}
 
